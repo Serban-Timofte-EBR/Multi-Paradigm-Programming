@@ -80,7 +80,7 @@ public class Main {
             System.arraycopy(x[i], 0, y[i], 0, x[i].length);
         }
 
-        System.arraycopy(y[n], 0, v, 0, v.length);
+        System.arraycopy(v, 0, y[n], 0, v.length);
 
         return x;
     }
