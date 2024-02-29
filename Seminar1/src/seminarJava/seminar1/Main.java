@@ -23,6 +23,8 @@ Media generala:6.466666666666667
 package seminarJava.seminar1;
 
 import java.util.Arrays;
+import java.util.DoubleSummaryStatistics;
+import java.util.Scanner;
 
 //toate clasele mostenesc object
 public class Main {
@@ -66,10 +68,84 @@ public class Main {
 
             x = stergereLinie(x);
             afisareMatrice(x, "Noua matrice dupa eliminarea liniei: ");
+
+            v = new double[x.length];
+            for(int i=0; i<v.length; i++) {
+                v[i] = Math.random() * 100;
+            }
+
+            x = adaugareColoana(x, v);
+            afisareMatrice(x, "Noua matrice dupa adaugarea unei coloane: ");
+
+            x = eliminareColoana(x);
+            afisareMatrice(x, "Noua matrice dupa ce s-a sters ultima coloana!");
         }
         catch (Exception e) {
             System.err.println(e);
         }
+
+        citire();
+    }
+
+
+
+
+    //CITIRE DIN FISIER SI MEDIE
+    private static void citire() {
+        try(Scanner scanner = new Scanner(System.in)) {                             //instantiere de resurse intre () => se inchid singure
+            int nr_grupe = Integer.parseInt(scanner.nextLine().trim());
+            DoubleSummaryStatistics sumator_total = new DoubleSummaryStatistics();
+            for(int i=0; i< nr_grupe; i++) {
+                String[] linie = scanner.nextLine().trim().split(",");      //trim scoate spatiile si split separata intr-un array dupa virgula
+                DoubleSummaryStatistics sumator_grupa = new DoubleSummaryStatistics();
+                for(int j = 1; j < linie.length; j++) {
+                    sumator_grupa.accept(Double.parseDouble(linie[j].trim()));
+                }
+                System.out.println("Grupa " + linie[0] + " are media " + sumator_grupa.getAverage());
+                sumator_total.accept(sumator_grupa.getAverage());
+            }
+            System.out.println("Media generala este " + sumator_total.getAverage());
+        }
+        catch (Exception ex) {
+            System.err.println(ex);
+        }
+    }
+
+
+
+
+
+
+
+    private static double[][] eliminareColoana(double[][] x) {
+        int n = x.length; //linii
+        int m = x[0].length; //coloane
+
+        double[][] y = new double[n][m-1];
+
+        for(int i=0; i<n; i++) {
+            System.arraycopy(y[i], 0, x[i], 0 , m-1);
+        }
+
+        return y;
+    }
+
+    public static double[][] adaugareColoana(double[][] x, double[] v) throws Exception{
+        int n = x.length; //linii
+        int m = x[0].length; //coloane
+
+        if(v.length != n) {
+            throw new Exception("Dimensiuni invalide la adaugarea coloanei!");
+        }
+
+        double[][] y = new double[n][m+1];
+
+        for(int i=0; i< n; i++) {
+            System.arraycopy(x[i], 0, y[i], 0, m);
+            y[i][m] = v[i];
+        }
+
+        return y;
     }
 
     public static double[][] adaugareLinie(double[][] x, double[] v) throws Exception {
