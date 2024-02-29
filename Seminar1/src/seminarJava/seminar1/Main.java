@@ -63,6 +63,9 @@ public class Main {
         try {
             x = adaugareLinie(x, v);
             afisareMatrice(x, "Noua Matrice: ");
+
+            x = stergereLinie(x);
+            afisareMatrice(x, "Noua matrice dupa eliminarea liniei: ");
         }
         catch (Exception e) {
             System.err.println(e);
@@ -83,6 +86,18 @@ public class Main {
         System.arraycopy(v, 0, y[n], 0, v.length);
 
         return x;
+    }
+
+    public static double[][] stergereLinie(double[][] x){
+        int n = x.length; //linii
+        int m = x[0].length; //coloane
+
+        double[][] y = new double[n-1][m];
+
+        for(int i=0; i<n-1; i++) {
+            System.arraycopy(x[i], 0, y[i], 0, m);
+        }
+        return y;
     }
 
     private static void afisareMatrice(double[][] x, String mesaj){
