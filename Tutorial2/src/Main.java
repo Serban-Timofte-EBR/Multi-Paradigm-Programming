@@ -1,0 +1,1 @@
+//Pachet = Un namespace din Cpp cu mai multe clase
