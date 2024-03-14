@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Date;
 
-public class Casa extends Imobil{
+public class Casa extends Imobil implements Cloneable{
     private int suprafataTeren;
     private String[] utilitati;
 
@@ -43,5 +43,11 @@ public class Casa extends Imobil{
                 "} ";
     }
 
-
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        Casa casa_clona = (Casa) super.clone();
+        casa_clona.setUtilitati(Arrays.copyOf(this.utilitati, this.utilitati.length));
+        casa_clona.dataP = ((Date) dataP.clone());
+        return casa_clona;
+    }
 }

@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Date;
 
-public class Apartament extends Imobil{
+public class Apartament extends Imobil implements Cloneable {
     private int etaj;
     private String[] dotari;
 
@@ -49,5 +49,11 @@ public class Apartament extends Imobil{
                 "} ";
     }
 
-
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        Apartament ap_clona = (Apartament) super.clone();
+        ap_clona.setDotari(Arrays.copyOf(this.dotari, this.dotari.length));
+        ap_clona.setDataP((Date) dataP.clone());
+        return ap_clona;
+    }
 }
