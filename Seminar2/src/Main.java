@@ -71,6 +71,9 @@ public class Main {
             for (Apartament a:apartamente) {
                 System.out.println(a);
             }
+
+            int index = apartamente.indexOf(apart);
+            System.out.println(index);
         }
         catch (Exception ex) {
             System.err.println(ex.toString());
