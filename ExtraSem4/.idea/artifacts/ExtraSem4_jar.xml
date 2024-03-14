@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ExtraSem4:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ExtraSem4_jar</output-path>
+    <root id="archive" name="ExtraSem4.jar">
+      <element id="module-output" name="ExtraSem4" />
+    </root>
+  </artifact>
+</component>
