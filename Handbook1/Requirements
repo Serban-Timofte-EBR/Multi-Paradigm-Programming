@@ -1,0 +1,43 @@
+1. Create a class called Meeting inside the "ro.ase.acs.models" package
+
+2. Add the following private fields to the new class
+	- name (string)
+	- startTime (integer)
+	- endTime (integer)
+	
+3. Add two constructors to the class
+	- a default constructor which initializes the name with an empty string,
+		the starTime with 0 and the endTime with 0
+	- a constructor with 3 parameters: name, startTime, duration
+		(the value of the endTime will be computed based on the duration)
+	
+4. Create a getter and a setter for the name field (getName/setName)
+
+5. Create a new Enum inside the package ro.ase.acs.models called Priority
+	with the possible values: low, medium, high
+	Add a field in the class called priority of this type and instantiate it
+	in both constructors with low
+
+6. Add an array of strings called participants as a private attribute
+	and instantiate it with null
+
+7. Create getters and setters for the array
+	that are creating deep copies (getParticipants/setParticipants)
+
+8. Override the Clone method and make it public
+	the method will create a deep copy
+
+9. Create a public method with the following signature
+		boolean checkParticipant(String)
+	which checks if the provided participant is in that meeting or not
+
+10. Concatenate two meetings by implementing the following public method
+		void concatenate(Meeting)
+	The method concatenates the existing meeting with the new one in the following manner:
+		- the names will be concatenated and separated by a slash
+			(eg. "Meeting1" + "Meeting2" will become "Meeting1/Meeting2")
+		- the startTime will be the minimum of the two
+		- the endTime will be the maximum of the two
+		- the priority will be the highest one
+		- the participants will be the ones from both meetings,
+			but they should appear only once in the array
