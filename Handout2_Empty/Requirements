@@ -1,0 +1,60 @@
+1. Create an interface called Saleable in the "ro.ase.acs.contracts" package
+
+2. Add the following abstract method to this interface
+		public float getPrice()
+		
+3. Create an abstract class called Product in the "ro.ase.acs.models" package
+	with the following protected fields:
+	- name (string)
+	- price (float)
+	- quantity (integer)
+	- add the following constructor to the class Product(name, price, quantity)
+	
+4. Inherit this class from the Saleable interface and override the abstract method.
+	The method will return the value of the price
+	
+5. Add the following abstract method to the Product class
+		public float getDiscount()
+	
+6. Add a class called EnGrosProduct to the "ro.ase.acs.models" package
+	the class will inherit Product and will have an additional private field called discount 
+	computed by the constructor (name, price, quantity) in the following manner
+	(the value of the field will be between 0 and 1 - floating point):
+	- if the quantity is bellow 10, the discount is 0
+	- if the quantity is greater or equal than 10, but bellow 20, the discount is 5%
+	- if the quantity is greater or equal than 20, the discount is 10%
+	
+	
+7. Override the getDiscount() method to return the discount per piece as an absolute value
+	(eg. for a product called "Bread" that has the price 20 and the quantity 30,
+		the discount is 2 because the quantity is over 20 and the discount 10%)
+
+8. Add to ability to the class EnGrosProduct to create deep copies (to be cloned)
+	and add getters for name and quantity
+
+9. Override the toString() method for the EnGrosProduct class
+	The method will display a line with the following details
+	for the product Bread described before:
+	"> Bread 20.0 30 10% 600.0 540.0"
+	where 20 is the price, 30 the quantity, 10% the discount
+	600 the value before discount (price x quantity)
+	and 540 the value after discount
+	
+10. Use a Java Collection, at your choice, to do the shop's stock management
+ Add the following two static methods in the EnGrosProduct class:
+ 	- void addProduct(EnGrosProduct)
+ 	- String printStock()
+ The stock will not contain duplicates. Example:
+ 	If I will add the following products to the stock:
+ 		- name: Flour, price 16, quantity 30
+ 		- name: Sugar, price 9, quantity 16
+ 		- name: Flour, price 16, quantity 20
+ 		
+ The printStock method should return the following string (not necessarily in this order):
+"> Flour 16.0 50 10% 800.0 720.0
+ > Sugar 9.0 16 5% 144.0 136.8
+ 
+ Total value of the stock without discount: 944.0"
+ 
+because the two products had the same name and price,
+they were considered a single product and the quantities were summed up
