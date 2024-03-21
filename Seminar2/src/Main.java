@@ -1,7 +1,6 @@
 import javax.xml.crypto.Data;
 import java.awt.im.InputContext;
-import java.io.BufferedReader;
-import java.io.FileReader;
+import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -74,9 +73,87 @@ public class Main {
 
             int index = apartamente.indexOf(apart);
             System.out.println(index);
+
+            salvareAgenti("agenti.csv");
+
+            //Cautare dupa id
+            //Apartament apartament2 = new Apartament(100);
+            Apartament apartament2 = new Apartament(4);
+            int k = apartamente.indexOf(apartament2);
+            if(k == -1) {
+                System.out.println("No apart with id: " + apartament2.id);
+            }
+            else {
+                System.out.println("Searched apartament:\n" + apartamente.get(k));
+            }
+
+            //Cautare dupa telefon proprietar
+            apartament2.setTelefonP("0722222222");
+            Comparator<Apartament> comparator = new Comparator<Apartament>() {
+                @Override
+                public int compare(Apartament o1, Apartament o2) {
+                    return o1.telefonP.compareTo(o2.telefonP);
+                }
+            };
+            Collections.sort(apartamente, comparator);
+            k = Collections.binarySearch(apartamente, apartament2, comparator);
+            if(k>=0) {
+                System.out.println("Apartamentul telefon: \n" + apartamente.get(k));
+            }
+            else {
+                System.out.println("ERROR 404 - NOT FOUND");
+            }
+
+            salvare("apartamente.dat");
+            restaurare("apartamente.dat");
+
+            System.out.println();
+            System.out.println("Lista restaurata");
+            for(Apartament aparta:apartamente) {
+                System.out.println(aparta);
+            }
+
+            afisareCNPuri();
         }
         catch (Exception ex) {
             System.err.println(ex.toString());
+        }
+    }
+
+    public static void salvare(String nume_fisier) {
+        try(ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(nume_fisier))) {
+            for (Apartament apartament : apartamente) {
+                out.writeObject(apartament);
+            }
+        }
+        catch (Exception ex) {
+            System.err.println(ex);
+        }
+    }
+
+    private static void afisareCNPuri() {
+        Map<Integer, Long> cnpuri = new HashMap<>();
+        for(Agent agent : agenti) {
+            for(int id: agent.getImobile()) {
+                cnpuri.put(id, agent.getCnp());
+            }
+        }
+        System.out.println("Map Imobil ID - Agent ID");
+        for(int id: cnpuri.keySet()) {
+            System.out.println(id + ": " + cnpuri.get(id));
+        }
+    }
+
+    public static void restaurare(String nume_fisier) {
+        try(FileInputStream input = new FileInputStream(nume_fisier);
+            ObjectInputStream in = new ObjectInputStream(input)) {
+            apartamente.clear();
+            while(input.available() != 0 ) {
+                apartamente.add((Apartament) in.readObject());
+            }
+        }
+        catch (Exception ex) {
+            System.err.println(ex);
         }
     }
     public static void citireDate(String nume_fisier) {
@@ -115,7 +192,18 @@ public class Main {
         }
 
         catch (Exception ex) {
-            System.err.println(ex.toString());
+            System.err.println(ex);
+        }
+    }
+
+    public static void salvareAgenti(String nume_fisier) {
+        try(PrintWriter out = new PrintWriter(nume_fisier)) {
+            for(Agent agent : agenti) {
+                out.println(agent.getCnp() + " " + agent.getNume() + " " + agent.getImobile().length);
+            }
+        }
+        catch (Exception ex) {
+            System.err.println(ex);
         }
     }
 }

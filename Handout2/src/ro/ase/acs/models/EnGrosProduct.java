@@ -66,7 +66,7 @@ public class EnGrosProduct extends  Product implements Cloneable{
     }
 
     public static String printStock() {
-        String list = " ";
+        String list = "";
         float total_value = 0;
         for (EnGrosProduct prod: shoppingList) {
             list = list + prod.toString() + "\n";

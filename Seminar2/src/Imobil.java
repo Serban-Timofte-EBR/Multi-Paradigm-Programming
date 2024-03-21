@@ -1,7 +1,8 @@
+import java.io.Serializable;
 import java.util.Date;
 
 //clasa abstracta
-public abstract class Imobil implements Comparable<Imobil> {    //generics functioneaza prin casturi ale obiectelor de tip Object la clasa specificata de  noi
+public abstract class Imobil implements Comparable<Imobil>, Serializable {    //generics functioneaza prin casturi ale obiectelor de tip Object la clasa specificata de  noi
     protected int id;
     protected int suprafataUtila;
     protected int etaje;

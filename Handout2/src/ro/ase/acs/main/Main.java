@@ -18,13 +18,16 @@ public class Main {
 			System.err.println(e);
 		}
 
-		EnGrosProduct flour = new EnGrosProduct("Flour", 16, 30);
-		EnGrosProduct sugar = new EnGrosProduct("Sugar", 9, 16);
-		EnGrosProduct flour2 = new EnGrosProduct("Flour", 16, 20);
+		System.out.println();
+		System.out.println();
 
-		EnGrosProduct.addProduct(flour);
-		EnGrosProduct.addProduct(sugar);
-		EnGrosProduct.addProduct(flour2);
+//		EnGrosProduct flour = new EnGrosProduct("Flour", 16, 30);
+//		EnGrosProduct sugar = new EnGrosProduct("Sugar", 9, 16);
+//		EnGrosProduct flour2 = new EnGrosProduct("Flour", 16, 20);
+//
+//		EnGrosProduct.addProduct(flour);
+//		EnGrosProduct.addProduct(sugar);
+//		EnGrosProduct.addProduct(flour2);
 
 		EnGrosProduct product1 = new EnGrosProduct("ABCD", 100.2F, 11);
 		EnGrosProduct product2 = new EnGrosProduct("ABCD", 100.7F, 15);
@@ -36,10 +39,8 @@ public class Main {
 		EnGrosProduct.addProduct(product3);
 		EnGrosProduct.addProduct(product4);
 		EnGrosProduct.addProduct(product5);
-		System.out.println(EnGrosProduct.printStock());
+
 		String list = EnGrosProduct.printStock();
 		System.out.println(list);
-
-		System.out.println(list.contains("XYZ"));
 	}
 }

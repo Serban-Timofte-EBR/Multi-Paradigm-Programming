@@ -1,7 +1,7 @@
 import java.sql.Array;
 import java.util.Arrays;
 
-public class Agent {
+public class Agent implements Operatiuni {
     private long cnp;
     private String nume;
     private int[] imobile;      //Lucram separat cu int[], nu includem in constructor
@@ -60,5 +60,11 @@ public class Agent {
     public String toString() {
         return "{" + cnp + ", " +  nume + ", "
                 + Arrays.toString(imobile) + '}';   //fara toString il printa ca adresa
+    }
+
+    @Override
+    public int inregistrare(int idImobil) {
+        addImobil(idImobil);
+        return this.imobile.length;
     }
 }
