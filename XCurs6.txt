@@ -1,0 +1,15 @@
+COMPUNERE INTERFETE FUNCTIONALE
+    1. Functiilor
+        - f.compose(g) => f(g(x))
+        - f.andThen(g) => Evaluez f si transmit rezultatul catre g
+
+    2. Predicatelor
+        - f.or(g)
+        - f.and(g)
+    
+    Consumers, Supplier, Functions
+
+JAVA STREAM API
+    - STREAM este un obiect care poate parcurge si procesa o colectie 
+    - implementeaza BaseStream<T, S extends BaseStream<T,S>>
+    
