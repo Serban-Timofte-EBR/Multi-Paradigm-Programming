@@ -53,6 +53,11 @@ public class EnGrosProduct extends  Product implements Cloneable{
         for (EnGrosProduct existingProduct: shoppingList) {
             if(existingProduct.equals(product)) {
                 existingProduct.quantity += product.quantity;
+                if(existingProduct.quantity < 10) {existingProduct.discount = 0;}
+                else if (existingProduct.quantity >= 10 && existingProduct.quantity < 20) {
+                    existingProduct.discount = 0.05f;
+                }
+                else {existingProduct.discount = 0.1f;}
                 found = true;
                 break;
             }
