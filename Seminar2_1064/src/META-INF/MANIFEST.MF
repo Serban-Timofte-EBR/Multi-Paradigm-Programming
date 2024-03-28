@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Main-Class: seminar.seminar2.g1064.Main
+
