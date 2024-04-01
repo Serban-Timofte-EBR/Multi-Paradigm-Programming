@@ -1,0 +1,43 @@
+MULTITHREADING - FIRE DE EXECUTIE
+    - Fir de executie = specifica executia secventiala a unui set de instructiuni
+    - Partajeaza acelasi spatiu de adrese cu celelalte fire de executie 
+
+    - Fiecare Thread are o stiva proprie
+    - Zona HEAP si zonele statice sunt partajate de catre toate firele 
+
+    !!!!
+    - extends Thread
+    - implements Runnable
+                            -- Override run function
+    - .start() lanseaza run 
+
+    LIFE CYCLE OF A Thread
+        - start lanseaza run in executie
+        - yield() -> spune procesorului ca renunta la timpul alocat acestui fir de executie si revine 
+    threadului din care a fost lansat 
+        - sleep() -> pune threadul intr-o stare de adormire pentru o perioada ( nu este afectata de notify sau all )
+        - join() indica asteptarea unui thread sa se termine (proaspat lansat)
+        
+
+
+        OPERATII DE BAZA:
+            - start -> apeleaza run
+            - sleep(long millis) -> opresc executia unui thread in interior 
+            - interrupt -> intrerupe un thread in mod implicit => IntrerruptedException in firul de executie 
+            - join() -> opreste executia firului curent 
+            - yield() -> actualul thread poate renunta la timpul de procesare alocat ( poate sa mai dureze pana la intrerupere )
+            
+                - t1 printeaza "A"
+                - t2 printeaza "B"
+                - in main:
+                    t1.start();
+                    t2.start();
+
+                    Printeaza A si B amestecat
+                    - Nu e un thread mai prioritar ca altul
+
+            - 2 threaduri incresenteaza acelasi numar ( o resusrsa comuna ) si nu folosim synchronized => se suprascriu si niciodata nu vor incrementa pana la capat
+
+        RACE CONDITIONS:
+            - threadurile utilizeaza aceeasi resusrsa
+            - rezultatul depinde de ordinea de executie 

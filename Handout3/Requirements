@@ -1,0 +1,61 @@
+1. Modify the ***matchDayReport*** method from the Utils.java class
+The method will write text in the file received as argument in the following format:
+	CSM Bucuresti 28 - 27 SCM Ramnicu Valcea
+	HC Zalau 35 - 35 SCM Craiova
+(every match on a new line, home team name followed by a space, home team goals,
+space, - character, space, and then away team goals, space, away team name)
+
+2. A CSV or Comma Separated Values is a special type of text file
+that can be opened by Excel or any other spreadsheet editor
+Modify the ***readFromCSV*** method from the Utils.java class
+in such a manner that you can return the list of matches from the CSV file
+received as argument (for a file draft please see "matches.csv" from the project)
+The method will return an empty list if the file doesn't exist or cannot be read
+
+3. You have a file called "secret.bin" that contains the number of championships
+won by a certain team. The only information that you know is that the file is 
+binary and that the information is an integer located after 12 bytes from the start
+of the file. Modify the ***secretInfo*** method to return the number.
+	
+4. Modify the ***serialize*** method to write the list of matches into the 
+binary file received as argument. You can use any method of binary serialization.
+	
+5. Modify the ***deserialize*** method to read the list of matches from the 
+binary file received as argument. You should be able to deserialize the data
+that you previously serialized.
+	
+6. Write the header of a CSV in the file received as argument by the method
+***writeHeader***. The header will contain the following info:
+NO TEAM PTS GF GA GD
+where:
+NO - position in the table
+TEAM - the name of the team
+PTS - number of points
+GF - goals for
+GA - goals against
+GD - goals difference
+The strings will be separated by a comma and a space
+a new line will be added at the end of the row
+	
+7. Modify the ***writePoints*** method so that it writes a valid CSV file that
+beside the header contains the team names and their number of points
+The points in handball are awarded in the following manner:
+0 points - for loosing team
+3 points - for winning team
+1 point - for both teams in case of draw
+
+8. Modify the ***writePointsAndGoals*** method that beside the number of points
+writes in the file the number of Goals For, Goals Against and the Goals Difference
+
+9. Modify the ***leagueTable*** method that beside the previous info,
+orders the teams from the file based on the number of points
+(on position 1 will be the team with the highest number of points)
+!!! Do not write the header this time
+	
+10. Modify the ***specialLeagueTable*** method that treats the cases when two
+different teams have the same number of points. In this case the ranking is
+done based on the following criteria (in this order):
+- goal difference
+- goals for
+- alphabetical
+!!! Do not write the header this time
