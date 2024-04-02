@@ -80,6 +80,15 @@ public class Main {
 			System.out.print(match.getHomeTeam() + ", " + match.getAwayTeam() + ", " +
 					match.getGoalsHomeTeam() + ", " + match.getGoalsAwayTeam() + System.lineSeparator());
 		}
+		Utils.serialize(list1, "matches.bin");
+
+		List<HandballMatch> matches_from_bin_file = new ArrayList<>();
+		matches_from_bin_file = Utils.deserialize("matches.bin");
+		System.out.println("\nMatches from bin file\n");
+		for(HandballMatch match : matches_from_bin_file) {
+			System.out.print(match.getHomeTeam() + ", " + match.getAwayTeam() + ", " +
+					match.getGoalsHomeTeam() + ", " + match.getGoalsAwayTeam() + System.lineSeparator());
+		}
 	}
 
 }

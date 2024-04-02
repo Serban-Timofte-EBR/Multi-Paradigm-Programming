@@ -1,5 +1,6 @@
 package ro.ase.acs.classes;
 
+import javax.xml.crypto.Data;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -58,7 +59,7 @@ public class Utils {
 	
 	public static int secretInfo(String filename) {
 		try(FileInputStream fis = new FileInputStream(filename);
-			DataInputStream dis = new DataInputStream(fis);
+			DataInputStream dis = new DataInputStream(fis)
 		) {
 			long skiped = dis.skip(12);
 			return dis.readInt();
@@ -70,12 +71,42 @@ public class Utils {
     }
 	
 	public static void serialize(List<HandballMatch> matches, String filename) {
-		
-	}
+		try(FileOutputStream fos = new FileOutputStream(filename);
+			DataOutputStream dos = new DataOutputStream(fos) ) {
+			dos.writeInt(matches.size());
+			for(HandballMatch match : matches) {
+				dos.writeUTF(match.getHomeTeam());
+				dos.writeInt(match.getGoalsHomeTeam());
+				dos.writeInt(match.getGoalsAwayTeam());
+				dos.writeUTF(match.getAwayTeam());
+			}
+		} catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 	
 	public static List<HandballMatch> deserialize(String filename) {
-		return null;
-	}
+		List<HandballMatch> matches = new ArrayList<>();
+		try(FileInputStream fis = new FileInputStream(filename);
+			DataInputStream dis = new DataInputStream(fis)) {
+			int nr_matches = dis.readInt();
+			for(int i=0; i< nr_matches; i++) {
+				HandballMatch match = new HandballMatch();
+				match.setHomeTeam(dis.readUTF());
+				match.setGoalsHomeTeam(dis.readInt());
+				match.setGoalsAwayTeam(dis.readInt());
+				match.setAwayTeam(dis.readUTF());
+				matches.add(match);
+			}
+		} catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+		return matches;
+    }
 	
 	public static void writeHeader(String filename) {
 		
