@@ -1,11 +1,14 @@
 package seminar.seminar6.g1064;
 
+import org.w3c.dom.ls.LSOutput;
 import seminar.seminar2.g1064.Agent;
 import seminar.seminar2.g1064.Apartament;
 import seminar.seminar2.g1064.Zona;
 
 import java.util.*;
+import java.util.function.BiConsumer;
 import java.util.function.Consumer;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 public class Main {
@@ -99,5 +102,94 @@ public class Main {
             numere_telefon.forEach(System.out::println);
             //System.out.println(numere_telefon);
         }
+
+        //Problema 6
+
+        Map<Integer, String> cerinta6 = apartamente.stream()
+                .collect(Collectors.toMap(Apartament::getId, Apartament::getTelefonP));
+        System.out.println();
+        System.out.println("Numarul de telefon pentru proprietarul fiecarui apartament");
+        cerinta6.entrySet().forEach(System.out::println);
+
+        //Problema 7 - V1
+//        Map<Zona, List<Apartament>> apartamente_zone = apartamente.stream()
+//                        .collect(Collectors.toMap(Apartament::getZona, apartament -> {
+//                            List<Apartament> aparts = new ArrayList<>();
+//                            aparts.add(apartament);
+//                            return aparts;
+//                        }));
+//        apartamente_zone.entrySet().forEach(System.out::println);
+        Map<Zona, List<Apartament>> apartamente_zone = apartamente.stream()
+                .collect(Collectors.groupingBy(Apartament::getZona));
+//        apartamente_zone.entrySet().forEach(System.out::println);
+        System.out.println();
+        System.out.println("Apartamente dupa zona: ");
+        System.out.println();
+        apartamente_zone.keySet().forEach(zona -> {
+            System.out.println(zona);
+            apartamente_zone.get(zona).forEach(System.out::println);
+        });
+
+        // Zona si id-ul
+        Map<Zona, List<Integer>> id_zona = apartamente.stream()
+                .collect(Collectors.groupingBy(Apartament::getZona,
+                        Collectors.mapping(Apartament::getId, Collectors.toList())));
+        System.out.println("\nLista Zona + Apartament ID\n");
+        id_zona.entrySet().forEach(System.out::println);
+
+        //SORTARE MAP - Suplimentar
+        cerinta6.values().stream().sorted();
+        cerinta6.entrySet().forEach(System.out::println);
+
+        //Valori medii ale apartamentelor pe zone
+
+        Map<Zona, Double> zona_valoare = apartamente.stream()
+                .collect(Collectors.groupingBy(Apartament::getZona,
+                        Collectors.averagingDouble(Apartament::getPret)));
+        System.out.println("\nValoarea medie pe zone\n");
+        zona_valoare.entrySet().forEach(System.out::println);
+
+        // Map - Apartament si Valoarea (zona si pretul pe m^2)
+        Map<Integer, ?> cerinta10 = apartamente.stream()
+                .collect(Collectors.toMap(Apartament::getId,
+                        apartament -> new Object(){
+                            Zona zona = apartament.getZona();
+                            Double pretm2 = apartament.getPret() / apartament.getSuprafataUtila();
+
+                            @Override
+                            public String toString() {
+                                return zona + ", " + pretm2;
+                            }
+                        }));
+        System.out.println("\nCerinta10\n");
+        cerinta10.entrySet().forEach(System.out::println);
+
+        //Numerele de telefon ale proprietarilor unui agent
+        Map<Long, Set<String>> cerinta11 = agenti.stream()
+                .collect(new Supplier<Map<Long, Set<String>>>() {
+                    @Override
+                    public Map<Long, Set<String>> get() {
+                        return new HashMap<>();
+                    }
+                }, new BiConsumer<Map<Long, Set<String>>, Agent>() {
+                    @Override
+                    public void accept(Map<Long, Set<String>> longSetMap, Agent agent) {
+                        Set<String> telefoane = new HashSet<>();
+                        Arrays.stream(agent.getImobile()).forEach(id -> {
+                            telefoane.add(apartamente.get(apartamente.indexOf(
+                                    new Apartament(id)
+                            )).getTelefonP());
+                        });
+                        longSetMap.put(agent.getCnp(), telefoane);
+                    }
+                }, new BiConsumer<Map<Long, Set<String>>, Map<Long, Set<String>>>() {
+                    @Override
+                    public void accept(Map<Long, Set<String>> longSetMap, Map<Long, Set<String>> longSetMap2) {
+                        longSetMap.putAll(longSetMap2);
+                    }
+                });
+
+        System.out.println("\nCerinta 11:\n");
+        cerinta11.entrySet().forEach(System.out::println);
     }
 }

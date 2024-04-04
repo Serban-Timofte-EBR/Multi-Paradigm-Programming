@@ -1,5 +1,6 @@
 package ro.ase.acs.main;
 
+import jdk.jshell.execution.Util;
 import ro.ase.acs.classes.HandballMatch;
 import ro.ase.acs.classes.Utils;
 
@@ -89,6 +90,14 @@ public class Main {
 			System.out.print(match.getHomeTeam() + ", " + match.getAwayTeam() + ", " +
 					match.getGoalsHomeTeam() + ", " + match.getGoalsAwayTeam() + System.lineSeparator());
 		}
+
+		Utils.writeHeader("ranking.csv");
+
+		Utils.writePoints("ranking.csv", list1);
+
+		Utils.writePointsAndGoals("rankingAndGoals.csv", list1);
+
+		Utils.leagueTable("League.csv", list1);
 	}
 
 }
