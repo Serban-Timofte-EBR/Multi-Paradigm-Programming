@@ -253,7 +253,6 @@ public class Utils {
 
 
 		try (FileWriter writer = new FileWriter(filename)) {
-			writer.write("TEAM, PTS, GF, GA, GD\n");
 			for (Map.Entry<String, int[]> entry : sortedTeams) {
 				int[] stats = entry.getValue();
 				writer.write(String.format("%s, %d, %d, %d, %d\n", entry.getKey(), stats[0], stats[1], stats[2], stats[3]));
@@ -264,6 +263,46 @@ public class Utils {
 	}
 	
 	public static void specialLeagueTable(String filename, List<HandballMatch> matches) {
-		
-	}
+		Map<String, int[]> teamsScores = new HashMap<>();
+
+		for (HandballMatch match : matches) {
+			int[] homeStats = {0, 0, 0, 0};
+			int[] awayStats = {0, 0, 0, 0};
+
+			if(match.getGoalsHomeTeam() > match.getGoalsAwayTeam()) {homeStats[0] += 3;}
+			else if (match.getGoalsAwayTeam() < match.getGoalsAwayTeam()) {awayStats[0] += 3;}
+			else { homeStats[0] += 1; awayStats[0] += 1; }
+
+			homeStats[1] += match.getGoalsHomeTeam();
+			homeStats[2] += match.getGoalsAwayTeam();
+			awayStats[1] += match.getGoalsAwayTeam();
+			awayStats[2] += match.getGoalsHomeTeam();
+
+			teamsScores.put(match.getHomeTeam(), homeStats);
+			teamsScores.put(match.getAwayTeam(), awayStats);
+		}
+
+		List<Team> ranking = new ArrayList<>();
+		for (String team : teamsScores.keySet()) {
+			int[] stats = teamsScores.get(team);
+			Team rankignTeam = new Team(team, stats[0], stats[1], stats[2], stats[3]);
+			ranking.add(rankignTeam);
+		}
+
+		List<Team> finalRanking = ranking.stream().sorted().toList();
+
+		try (FileOutputStream fos = new FileOutputStream(filename);
+			 OutputStreamWriter osw = new OutputStreamWriter(fos);
+			 BufferedWriter bw = new BufferedWriter(osw)
+			 ) {
+			for(Team team : finalRanking) {
+				bw.write( team.getPosition() + ", " + team.getName() + ", " + team.getPoints() + ", " + team.getGF() + ", " + team.getGA() + ", " + team.getGD() + System.lineSeparator());
+				team.setPosition();
+			}
+		} catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

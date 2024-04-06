@@ -4,6 +4,7 @@ import jdk.jshell.execution.Util;
 import ro.ase.acs.classes.HandballMatch;
 import ro.ase.acs.classes.Utils;
 
+import java.rmi.server.UID;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -98,6 +99,8 @@ public class Main {
 		Utils.writePointsAndGoals("rankingAndGoals.csv", list1);
 
 		Utils.leagueTable("League.csv", list1);
+
+		Utils.specialLeagueTable("FINALRANKING.csv", list2);
 	}
 
 }
