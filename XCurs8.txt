@@ -1,0 +1,24 @@
+DEADLOCK
+syncronized(lockA) {
+    b++;
+    syncronized(lockB) {
+        a++;
+    }
+}
+
+// Varianta Corecta
+syncronized(lockA) {
+    syncronized(lockB) {
+        a++;                    //Orice oridine lockA si lockB sau a++ si b++
+        b++;                    // Puteam folosi si un singur syncronized
+    }
+}
+
+
+- Nu conteaza ce este transmis ca syncronized, doar sa fie facuta intr-un bloc comun operatiile care modifica 2 variabile
+- syncronized reprezinta o zona de memorie unde are acces un thread si doar unul
+
+- Ca sa pot accesa WAIT trebuie sa fiu in bloc syncronized
+- notifyAll notifica toate blocurile blocate 
+- notify alege un thread la intamplare si il modifica   
+    - in ambele situatii de notify, firul curent trebuie sa aiba control asupra blocului 
