@@ -1,0 +1,55 @@
+Each requirements has 1 point. 1 point ex officio.
+
+1. Create an interface called Borrowable in the "com.university.library.contracts" package
+	Add the following abstract method to this interface
+		boolean isAvailable()
+		
+Create an abstract class called LibraryItem in the "com.university.library.models" package
+	with the following protected fields:
+	- title (string)
+	- author (string)
+	- yearPublished (int)
+	- add the following constructor to the class LibraryItem(title, author, yearPublished)
+	
+2. Inherit this class from the Borrowable interface and override the abstract method isAvailable().
+	The method will return true by default.
+	Add the following abstract method to the LibraryItem class:
+		public int getLoanPeriod()
+	
+3. Add a class called Book to the "com.university.library.models" package
+	the class will inherit LibraryItem and will have an additional private field called genre
+	This will be an enum (called Genre) created in the models package with the following possible values:
+	FICTION, NONFICTION, SCIENCE, HISTORY
+	Add a constructor with 4 parameters Book(title, author, yearPublished, genre) to the class
+	
+4. Override the getLoanPeriod() method to return different values based on genre
+	FICTION: 14 days, NONFICTION: 30 days, SCIENCE: 21 days, HISTORY: 21 days
+	
+	Add a new member to the class called borrowingStatusPerDay - this will be a boolean array (boolean[])
+   	create a getter and a setter for this member
+
+5. Add to ability to the class Book to create deep copies (to be cloned)
+	and add getters for title, author, yearPublished, genre
+	Override the isAvailable() method to return true or false based on the last element of the array
+	(if the last element is true the book is available, otherwise it isn't)
+
+6. Override the toString() method for the Book class
+	The method will display a line with the following details:
+	Format: "1984 by George Orwell - FICTION"
+	Where "1984" is the title, "George Orwell" the author, and "FICTION" the genre
+	
+7. Create a class called Library in the "com.university.library.models" package
+	This class will contain a collection of Books that will allow you
+	to save the Books sorted based on the following fields: first by title and then by author
+ 	
+ 	Add the following public methods to the Library.java class:
+ 	- void addBook(Book) -> this will add a new element in the collection
+ 	- Collection<Book> getBooks() -> this will return the books added so far
+
+8. Initialize the lambdaOperation field from the Utils.java class 
+	with a lambda expression that computes the product of the values from the array argument
+	E.g. if the array is { 1, 2, 3 }, the function should return 6
+
+9. Create a function public static Stream<Book> getGeorgeOrwellBooks(List<Book>) 
+	in Utils.java file in order to return a Stream
+	with all the books written by getGeorgeOrwellBooks in ascending order of the title

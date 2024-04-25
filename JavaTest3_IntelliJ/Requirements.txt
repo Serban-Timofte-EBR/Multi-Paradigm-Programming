@@ -1,0 +1,61 @@
+Fiecare cerinta are 1 punct. Se acorda 1 punct din oficiu.
+
+1. Creati o interfata denumita Cumparabil in pachetul "ro.ase.acs.contracts"
+	Adaugati urmatoarea metoda abstracta in interfata
+		float getPret()
+		
+   Creati o clasa abstracta denumita BiletAbstract in pachetul "ro.ase.acs.models"
+	cu urmatoarele atribute protected:
+	- plecare (string)
+	- sosire (string)
+	- distanta (integer)
+	- adugati clasei un constructor de forma BiletAbstract(plecare, sosire, distanta)
+	
+2. Derivati clasa din interfata Cumparabil si supradefiniti metoda getPret().
+	Metoda va returna valoarea 3 momentan
+	Adaugati urmatoarea metoda abstracta in clasa BiletAbstract:
+		public float getReducere()
+	
+3. Adaugati o clasa denumita BiletAutocar in pachetul "ro.ase.acs.models"
+	clasa va deriva clasa abstracta BiletAbstract si va avea un camp privat denumit tipReducere
+	Tipul acestui camp va fi o enumeratie denumita TipReducere (creata in acelasi pachet ca si clasa)
+	cu urmatoarele valori: STUDENT, PENSIONAR
+	Adaugati clasei un constructor cu 4 parametri (plecare, sosire, distanta, tipReducere)
+	
+4. Supradefiniti metoda getReducere astfel:
+	metoda va return 0.5 daca reducerea este de tip STUDENT si 0.9 daca este de tip PENSIONAR
+	
+	Adaugati in clasa un vector de string numit statii (String[]) ce reprezinta numele
+	opririlor facute de autocar. Adaugati getter si setter pentru acest camp.
+
+5. Adaugati clasei BiletAutocar abilitatea de a creea copii in profunzime (de a fi clonata)
+	si adaugati getteri pentru: plecare, sosire, distanta si tiReducere
+	Supradefiniti metoda getPret() care va returna pretul pe baza urmatoarei formule:
+		pret = pretul returnat de metoda getPret() din BiletAbstract x distanta x (1 - reducere)
+
+6. Supradefiniti metoda toString() pentru clasa BiletAutocat
+	Acesta va returna un string de tip:
+	"-- Bucuresti Suceava 700 --"
+	unde "Bucuresti" este orasul de plecare, "Suceava" cel de sosire si "700" distanta
+	
+7. Utilizati o colectie Java (definita ca atribut statuc), la alegere, 
+	care va va permite sa salvati toate biletele emise
+ Adaugati urmatoarele metode publice si statice in clasa BiletAutocar:
+ 	- void emiteBilet(BiletAutocar) -> va adauga un nou element in colectie
+ 	- Collection<BiletAutocar> bileteEmise() -> va returna toate biletele emise pana acum
+
+8. Adaugati metoda public static Stream<BiletAutocar> getLocuriVandute(List<BiletAutocar>, int) in clasa Utils.java
+Aceasta va returna un Stream ce contine toate biletele de autocar
+ce au tipReducere = STUDENT si distanta mai mica strict decat valoarea primita drept parametru
+
+9. Adaugati in clasa Utils.java metoda statica si publica void salveazaInFisier(BiletAutocar b, String numeFisier)
+	care va scrie intr-un fisier text informatiile di biletul de autocar in urmatorul format:
+	plecare
+	sosire
+	distanta
+	tipReducere
+Exemplu (fiecare linie noua reprezinta o linie noua in fisier):
+Bucuresti
+Suceava
+700
+PENSIONAR

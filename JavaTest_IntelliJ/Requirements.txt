@@ -1,0 +1,53 @@
+Each requirements has 1 point. 1 point ex officio.
+
+1. Create an interface called Rideable in the "com.university.traffic.contracts" package
+	Add the following abstract method to this interface
+		int getMaxSpeed()
+		
+	Create an abstract class called Vehicle in the "com.university.traffic.models" package
+	with the following protected fields:
+     - make (String)
+     - model (String)
+     - year (int)
+	- add the following constructor to the class Vehicle(make, model, year)
+	
+2. Inherit this class from the Rideable interface and override the abstract method getMaxSpeed().
+	The method returns 100 by default
+	Add the following abstract method to the Vehicle class:
+		public float getFuelEfficiency()
+	
+3. Add a class called Car to the "com.university.traffic.models" package
+	the class will inherit Vehicle and will have an additional private field called fuelType
+	This will be an enum created in the models package with the following possible values:
+	PETROL, DIESEL, ELECTRIC (the enum is called FuelType)
+	Add a constructor with 4 parameters (make, model, year, fuelType) to the class
+	
+4. Override the getFuelEfficiency() method which returns efficiency values based on fuelType
+     - PETROL: 12.5, DIESEL: 15, ELECTRIC: 0 (km per liter or equivalent) 
+   Add a new member to the class called distances - this will be an int array (int[])
+   	create a getter and a setter for this member
+
+5. Add to ability to the class Car to create deep copies (to be cloned)
+	and add getters for make, model, year and fuelType
+	Override the getMaxSpeed() method to return the speed using the following formula:
+		speed = 200 for PETROL; 180 for DIESEL and 250 for ELECTRIC
+
+6. Override the toString() method for the Car class
+	The method will display a line with the following details:
+     - Format: "Toyota Corolla 2015 - PETROL"
+     - Where "Toyota" is the make, "Corolla" the model, "2015" the year, and "PETROL" the fuel type
+	
+7. Use a Java Collection (defined as a static attribute), at your choice, 
+	that will allow you to save all the distinct cars
+ Add the following public static methods to the Car.java class:
+ 	- void registerVehicle(Vehicle) -> Adds a new vehicle
+ 	- Collection<Vehicle> getRegisteredVehicles() -> Returns all registered vehicles
+Equality: Vehicles are considered identical if they have the same make, model, and year
+
+8. Initialize the lambdaOperation field from the Utils.java class 
+with a lambda expression that computes in a secondary thread the cube of the value called value
+E.g. if the values is 2 the function should return 8, if the values is 4, the result is 64, etc.
+the computed value is saved in the attribute called cube
+
+9. Modify the getNewElectricCars function from Utils.java in order to return a Stream
+with all the DISTINCT electric cars that are made after 2023 (including 2023)
