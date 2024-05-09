@@ -1,0 +1,34 @@
+Să se scrie o aplicație în arhitectură client-server TCP/IP pentru gestiunea informațiilor privind
+apartamentele publicate spre tranzacționare de către o agenție imobiliară, folosind clasele și
+interfețele dezvoltate în Tema 2.3.
+Componenta server va fi un proiect IntelliJ IDEA Java consolă.
+Sarcinile serverului :
+1. Serverul va importa o librărie jar produsă de proiectul dezvoltat pentru Tema 2.3.
+2. Serverul va citi informațiile despre apartamente și agenți din tabelele APARTAMENTE și
+AGENTI ale bazei de date Sqlite g1064.db. Dacă tabelele nu există, datele vor fi citite din fișierul
+apartamente.csv prin metodele dezvoltate în Tema 2.3 și se vor crea tabelele APARTAMENTE și
+AGENTI mai sus menționate. Tabela APARTAMENTE va avea structura:
+id - Id apartament - integer - PK
+cnp_agent - Cnp agent - bigint
+suprafata_utila - Suprafața utilă - integer
+etaje - Regim de înălțime - integer
+nr_camere - număr camere - integer
+telefon_p - telefon proprietar - varchar(20)
+zona - Zona - varchar(50)
+pret - Preț - double
+data_p - Data publicării - varchar(10)
+etaj - Etaj - integer
+dotari - Dotări - varchar(50)
+Tabela AGENTI va avea structura:
+cnp - Cnp agent - bigint - PK
+nume - Nume agent - varchar(50)
+3. Serverul va răspunde interogărilor clientului în regim multi-threading și se oprește din funcțiune
+în baza unui mesaj de stop primit de la client.
+Componenta client va fi un proiect IntelliJ IDEA Java consolă. Clientul va trimite diverse solicitări
+spre server și va afișa rezultatul acestora în fișiere JSON/XML sau baze de date. De asemenea
+clientul poate trimite semnal de închidere spre server.
+Cereri:
+1 - Returnarea unui apartament după id
+2 - Solicitarea apartamentelor din portofoliul unui agent și salvarea lor în fișierul JSON agent.json
+3 - Solicitarea apartamentelor dintr-o anumită zonă și salvarea lor în fișierul XML zona.xml
+4 - Adăugarea de noi apartamente din fișierul input.json.
