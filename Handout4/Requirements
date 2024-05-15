@@ -1,0 +1,62 @@
+1. Initialize the anonymousOperation field with an anonymous class that overrides 
+the doOperation method in order to provide the product of the array elements
+E.g. if the parameter is an array like { 1, 2, 3 }, the function should return 6
+
+2. Initialize the lambdaOperation field from the Utils.java class 
+with a lambda expression that computes the average value of the data series
+E.g. if the parameter is an array like { 1, 2, 3 }, the function should return 2
+
+We consider a deck of playing cards in the following format:
+Ranks: 2, 3, 4, 5, 6, 7, 8, 9, T, J, Q, K, A
+Suits: S - Spade, D - Diamond, H - Heart, C - Club
+
+Every card will be identified by 2 characters
+E.g. "3S" (3 of Spades), "TC" (10 of Club), "AH" (Ace of Heart)
+
+3. Modify the getCardsBySuit function in order to return a Stream
+with all the cards belonging to that suit
+E.g. for a list that contains "2H", "3S", "TH" and the suit is 'H'
+the result should be a stream containing "2H" and "TH"
+
+4. Modify the getCardsByRank function in order to return a Stream
+with all the DISTINCT cards of that rank, alphabetically SORTED
+E.g. for a list that contains "2H", "2S", "TH" and the rank is '2'
+the result should be a stream containing "2H" and "2S" in this order
+
+5. Modify the getCardsLowerThan function in order to return a Stream
+with all the cards that are ranked lower than the rank received as parameter
+(the order of the rankings is the one from line 10 of this file)
+
+6. Modify the getCardsLowerThanSorted function in order to return a Stream
+with all the cards that are ranked lower than the rank received as parameter
+Additionally they should be sorted in the following manner:
+- first all the cards of Spade by rank ascending
+- then all the cards of Diamond by rank ascending
+- then all the cards of Heart by rank ascending
+- finally all the cards of Club by rank ascending
+
+7. Modify the transformArray method from the DataSeriesOperation interface
+into a default method that will return the array as a string
+E.g. for an array like { 1, 2, 3 } it should return "1, 2, 3"
+
+8. Modify the printDeckRanks function in the following manner:
+- every cards is mapped to its ranking (2 of any rank -> 1, 3 of any rank -> 2, ...
+	T of any rank -> 9, ... A of any rank -> 13)
+- the ranks are sorted ascending
+- the function calls the previous method to print the ranks
+(the Stream received as parameter contains cards in the same format as before)
+E.g. For a stream containing "3S, "TC", "AH" the function should return "2 9 13"
+
+9. Write an inner class inside the Utils.java file that uses a Runnable
+implementation in order to apply the anonymousOperation in a secondary thread
+on the Array called input (please do not modify it)
+	!!!an anonymous class/lambda expression is also accepted!!!
+Save an instance of this class in the runnable attribute from the Utils.java file
+When started this thread should save the result in the result field from Utils.java
+
+10. Write an inner class inside the Utils.java file that uses a Callable
+implementation that applies the lambdaOperation in a secondary thread
+on the Array called input (please do not modify it)
+	!!!an anonymous class/lambda expression is also accepted!!!
+Save an instance of this class in the callable attribute from Utils.java file
+
