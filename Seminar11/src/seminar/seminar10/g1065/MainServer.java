@@ -9,16 +9,15 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.sql.Connection;
-import java.sql.DatabaseMetaData;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
+import java.sql.*;
 import java.util.List;
 
 public class MainServer implements AutoCloseable{
     private ServerSocket serverSocket;
     private boolean stopServer;
 
+    private List<Apartament> apartamente;
+    private List<Agent> agenti;
     public MainServer() throws IOException {
         serverSocket = new ServerSocket(2020);
     }
@@ -76,11 +75,83 @@ public class MainServer implements AutoCloseable{
             DatabaseMetaData dbm = connection.getMetaData();
             try (ResultSet rm = dbm.getTables(null, null, "APARTAMENTE",  new String[]{"TABLE"})) {
                 if(!rm.next()) {
+                    System.out.println("Nu exista tabele!");
+                    try(Statement sta = connection.createStatement()) {
+                        String comandaCreare = "CREATE TABLE APARTAMENTE (" +
+                                "id integer primary key,"+
+                                "cnp_agent bigint,"+
+                                "suprafata_utila interger,"+
+                                "etaje integer,"+
+                                "nr_camere integer,"+
+                                "telefon_p varchar(20)," +
+                                "zona varchar(20),"+
+                                "pret double," +
+                                "data_p varchar(10)," +
+                                "etaj integer," +
+                                "dotari varchar(50)"
+                                + ")";
+                        sta.executeUpdate(comandaCreare);
+                        System.out.println("Tabela APARTAMENTE a fost creata!");
+                        comandaCreare = "CREATE TABLE AGENTI (" +
+                                "cnp bigint primary key," +
+                                "nume varchar(30)" +
+                                ")";
+                        sta.executeUpdate(comandaCreare);
+                        System.out.println("Tabela AGENTI a fost creata!");
+                    }
+
+                    System.out.println("Inserare articole");
                     Main.citireDate("apartamente.csv");
-                    List<Apartament> apartamente = Main.apartamente;
-                    List<Agent> agenti = Main.agenti;
-                    System.out.println(apartamente);
-                    System.out.println(agenti);
+                    apartamente = Main.apartamente;
+                    agenti = Main.agenti;
+                    try(Statement sta = connection.createStatement()) {
+                        for(Agent agent : agenti) {
+                            String comandaInserare = "INSERT INTO AGENTI VALUES (" +
+                                    agent.getCnp() + ", " +
+                                    "'" + agent.getNume() + "'" +
+                                    ")";
+                            sta.executeUpdate(comandaInserare);
+                            for (int id : agent.getImobile()) {
+                                Apartament apartament = apartamente.stream().filter(ap -> ap.getId() == id).findFirst().get();
+                                comandaInserare = "INSERT INTO APARTAMENTE VALUES (" +
+                                        id + "," +
+                                        agent.getCnp() + "," +
+                                        apartament.getSuprafataUtila() + "," +
+                                        apartament.getEtaje() + "," +
+                                        apartament.getNrCamere() + "," +
+                                        "'" + apartament.getTelefonP() + "'," +
+                                        "'" + apartament.getZona() + "'," +
+                                        apartament.getPret() + "," +
+                                        "'" + Main.fmt.format(apartament.getDataP()) + "'," +
+                                        apartament.getEtaj() + "," +
+                                        "'" + String.join(",", apartament.getDotari()) + "'" +
+                                        ")";
+                                sta.executeUpdate(comandaInserare);
+                            }
+                        }
+                    }
+                    System.out.println("Inserari efectuate!");
+                } else {
+                    try(Statement sta = connection.createStatement();
+                        ResultSet r = sta.executeQuery("SELECT  * FROM AGENTI")) {
+                            while (r.next()) {
+                                Agent agent = new Agent(r.getLong(1), r.getString(2));
+                                agenti.add(agent);
+                            }
+                    }
+                    try (Statement sta = connection.createStatement();
+                        ResultSet r = sta.executeQuery("SELECT * FROM APARTAMENTE")) {
+                            while (r.next()) {
+                                Apartament apartament = new Apartament();
+                                apartament.setId(r.getInt(1));
+                                long cnp = r.getLong(2);
+                                //// ...... ////
+                                apartament.setDotari(r.getString(11).split(","));
+
+                                Agent agent = agenti.stream().filter(ag -> ag.getCnp() == cnp).findFirst().get();
+                                agent.addImobil(apartament.getId());
+                            }
+                    }
                 }
             }
         }
