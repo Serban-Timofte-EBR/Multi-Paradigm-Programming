@@ -1,0 +1,58 @@
+[
+    {
+        "Pret Unitar": 4,
+        "Unitate de masura": "kg",
+        "Cod": 1,
+        "Denumire": "Faina 650",
+        "Cantitate": 10000
+    },
+    {
+        "Pret Unitar": 3.5,
+        "Unitate de masura": "kg",
+        "Cod": 2,
+        "Denumire": "Zahar",
+        "Cantitate": 100
+    },
+    {
+        "Pret Unitar": 8,
+        "Unitate de masura": "kg",
+        "Cod": 3,
+        "Denumire": "Sare",
+        "Cantitate": 80
+    },
+    {
+        "Pret Unitar": 200,
+        "Unitate de masura": "kg",
+        "Cod": 4,
+        "Denumire": "Drojdie",
+        "Cantitate": 50
+    },
+    {
+        "Pret Unitar": 5,
+        "Unitate de masura": "kg",
+        "Cod": 5,
+        "Denumire": "Faina 000",
+        "Cantitate": 15000
+    },
+    {
+        "Pret Unitar": 4,
+        "Unitate de masura": "litri",
+        "Cod": 6,
+        "Denumire": "Lapte",
+        "Cantitate": 90
+    },
+    {
+        "Pret Unitar": 80,
+        "Unitate de masura": "kg",
+        "Cod": 7,
+        "Denumire": "Nuca",
+        "Cantitate": 40
+    },
+    {
+        "Pret Unitar": 1.5,
+        "Unitate de masura": "kg",
+        "Cod": 8,
+        "Denumire": "Grau",
+        "Cantitate": 20000
+    }
+]

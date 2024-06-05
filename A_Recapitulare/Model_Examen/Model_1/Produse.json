@@ -1,0 +1,98 @@
+[
+  {
+    "Cod produs": 4,
+    "Denumire produs": "Paine dietetica",
+    "Consumuri": [
+      {
+        "Cod materie prima": 1,
+        "Cantitate": 50
+      },
+      {
+        "Cod materie prima": 4,
+        "Cantitate": 0.5
+      }
+    ],
+    "Cantitate": 100,
+    "Unitate masura": "bucati"
+  },
+  {
+    "Cod produs": 1,
+    "Denumire produs": "Paine alba 500g",
+    "Consumuri": [
+      {
+        "Cod materie prima": 1,
+        "Cantitate": 200
+      },
+      {
+        "Cod materie prima": 2,
+        "Cantitate": 5
+      },
+      {
+        "Cod materie prima": 3,
+        "Cantitate": 5
+      },
+      {
+        "Cod materie prima": 4,
+        "Cantitate": 3
+      }
+    ],
+    "Cantitate": 1000,
+    "Unitate masura": "bucati"
+  },
+  {
+    "Cod produs": 2,
+    "Denumire produs": "Cozonac",
+    "Consumuri": [
+      {
+        "Cod materie prima": 5,
+        "Cantitate": 50
+      },
+      {
+        "Cod materie prima": 2,
+        "Cantitate": 15
+      },
+      {
+        "Cod materie prima": 3,
+        "Cantitate": 0.5
+      },
+      {
+        "Cod materie prima": 4,
+        "Cantitate": 1
+      },
+      {
+        "Cod materie prima": 7,
+        "Cantitate": 6
+      }
+    ],
+    "Cantitate": 300,
+    "Unitate masura": "bucati"
+  },
+  {
+    "Cod produs": 3,
+    "Denumire produs": "Paine integrala",
+    "Consumuri": [
+      {
+        "Cod materie prima": 1,
+        "Cantitate": 50
+      },
+      {
+        "Cod materie prima": 2,
+        "Cantitate": 5
+      },
+      {
+        "Cod materie prima": 3,
+        "Cantitate": 5
+      },
+      {
+        "Cod materie prima": 4,
+        "Cantitate": 3
+      },
+      {
+        "Cod materie prima": 8,
+        "Cantitate": 500
+      }
+    ],
+    "Cantitate": 2000,
+    "Unitate masura": "bucati"
+  }
+]

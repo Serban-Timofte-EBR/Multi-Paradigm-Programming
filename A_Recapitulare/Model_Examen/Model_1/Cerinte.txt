@@ -1,0 +1,95 @@
+Fie datele de intrare (in directorul date):
+
+a) Tabela MateriiPrime din baza de date SQLite examen.db contine materiile prime aflate in depozitul unei firme
+de panificatie. Tabela are urmatoarele coloane:
+Cod - integer; Denumire - text; Cantitate - real; Pret_unitar - real; Unitate_masura - text.
+Exemplu:
+1;Faina 650;10000.0;4.0;kg
+2;Zahar;100.0;3.5;kg
+...
+
+b) Fișierul produse.json conține o lista de produse de panificatie care se fabrica din materiile prime de mai sus.
+Formatul fisierului este:
+[
+   {
+	"Cod produs 1": valoare,
+      	"Nume produs 1": text,
+	"Consumuri": [
+         {
+            "Cod materie prima 1": valoare,
+            "Cantitate 1": valoare
+         },
+	...
+	],
+	"Cantitate": valoare,
+	"Unitate masura": text
+   },
+...
+]
+
+
+Exemplu:
+[
+   {
+       "Cod produs": 1,
+       "Denumire produs": "Paine alba 500g",
+       "Consumuri": [
+         {
+           "Cod materie prima": 1,
+           "Cantitate": 200
+         },
+         {
+           "Cod materie prima": 2,
+           "Cantitate": 5
+         },
+         {
+           "Cod materie prima": 3,
+           "Cantitate": 5
+         },
+         {
+           "Cod materie prima": 4,
+           "Cantitate": 3
+         }
+       ],
+       "Cantitate": 1000,
+       "Unitate masura": "bucati"
+     },
+...
+]
+
+Să se scrie o aplicație Java care să rezolve următoarele cerințe:
+
+1) Să se afișeze la consolă valoarea totala a materiilor prime.
+
+Punctaj: 2 puncte
+Criteriu de acordare a punctajului: afișarea corectă la consolă.
+
+2) Să se afișeze la consolă produsele de panificatie sortate descrescator dupa numarul de materii prime utilizate in fabricatie.
+
+Punctaj: 2 puncte
+Criteriu de acordare a punctajului: afișarea corectă la consolă.
+
+3) Să se salveze in fisierul stoc.xml stocul final de materii prime (dupa scaderea cantitatilor intrate in fabricatie), in formatul:
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<materii_prime>
+    <materie_prima cod="1" denumire="Faina 650" valoare="38800.0"/>
+...
+</materii_prime>
+unde valoare este cantitatea ramasa inmultita cu pretul unitar.
+
+Punctaj: 2 puncte
+Criteriu de acordare a punctajului: afișarea corectă la consolă
+
+4) Să implementeze funcționalitățile de server și client TCP/IP și să se execute următorul scenariu:
+- componenta client trimite serverului un codul unui produs
+- componenta server va întoarce cantitatea produsa din produsul respectiv
+- componenta server poate servi oricâți clienți.
+Punctaj: 3 puncte
+Criteriu de acordare a punctajului: 2 puncte pentru afișare la consolă comunicare corectă client-server,
+1 punct pentru implementare în care serverul poate servi oricâți clienți.
+
+Observatii:
+- 1p din oficiu
+- criteriu de acordare a punctajului: afișarea corectă conform cerinței
+- nu se acordă punctaj parțial pentru cerințe
+- nu se acordă punctaj pentru programe cu erori de compilare sau de execuție
