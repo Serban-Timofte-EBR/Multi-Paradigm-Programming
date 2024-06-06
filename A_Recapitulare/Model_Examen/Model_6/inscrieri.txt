@@ -1,0 +1,10 @@
+1001, Ana Popescu, 9.5, 1
+1002, Mihai Ionescu, 8.7, 2
+1003, Ioana Georgescu, 9.3, 1
+1004, Andrei Marinescu, 7.5, 3
+1005, Maria Ene, 8.9, 4
+1006, Ion Popa, 9.1, 5
+1007, Elena Vasilescu, 9.0, 1
+1008, Alex Dumitrescu, 8.3, 2
+1009, Georgiana Pavel, 9.4, 4
+1010, Radu Petrescu, 8.6, 5

@@ -1,0 +1,32 @@
+[
+    {
+        "numar_inscrier": 3,
+        "denumire": "Cibernetica",
+        "medie": 9.266666666666667,
+        "cod_specializare": 1
+    },
+    {
+        "numar_inscrier": 2,
+        "denumire": "Informatica",
+        "medie": 8.5,
+        "cod_specializare": 2
+    },
+    {
+        "numar_inscrier": 1,
+        "denumire": "Matematica",
+        "medie": 7.5,
+        "cod_specializare": 3
+    },
+    {
+        "numar_inscrier": 2,
+        "denumire": "Contabilitate",
+        "medie": 9.15,
+        "cod_specializare": 4
+    },
+    {
+        "numar_inscrier": 2,
+        "denumire": "Marketing",
+        "medie": 8.85,
+        "cod_specializare": 5
+    }
+]
