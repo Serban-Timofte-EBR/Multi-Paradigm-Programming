@@ -1,0 +1,4 @@
+Gaze naturale,persoane,140
+Apa calda,persoane,800
+Caldura,suprafata,500
+Gunoi,apartament,200
