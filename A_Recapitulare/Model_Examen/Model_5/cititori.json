@@ -1,0 +1,39 @@
+[
+  {
+    "nume": "Popescu Ion",
+    "cartiImprumutate": [
+      { "titlu": "Programare in Java", "dataImprumut": "2023-05-12" },
+      { "titlu": "Bazele informaticii", "dataImprumut": "2023-06-01" }
+    ]
+  },
+  {
+    "nume": "Ionescu Maria",
+    "cartiImprumutate": [
+      { "titlu": "Programare in Java", "dataImprumut": "2023-04-20" },
+      { "titlu": "Ghid de matematica", "dataImprumut": "2023-06-05" },
+      { "titlu": "Introducere in algoritmi", "dataImprumut": "2023-07-01" }
+    ]
+  },
+  {
+    "nume": "Vasilescu Alexandru",
+    "cartiImprumutate": [
+      { "titlu": "Analiza matematica", "dataImprumut": "2023-04-15" },
+      { "titlu": "Istoria antica", "dataImprumut": "2023-05-10" }
+    ]
+  },
+  {
+    "nume": "Georgescu Elena",
+    "cartiImprumutate": [
+      { "titlu": "Razboaiele mondiale", "dataImprumut": "2023-03-30" }
+    ]
+  },
+  {
+    "nume": "Popa Andreea",
+    "cartiImprumutate": [
+      { "titlu": "Programare in Java", "dataImprumut": "2023-06-10" },
+      { "titlu": "Bazele informaticii", "dataImprumut": "2023-07-15" },
+      { "titlu": "Introducere in algoritmi", "dataImprumut": "2023-08-01" },
+      { "titlu": "Analiza matematica", "dataImprumut": "2023-09-05" }
+    ]
+  }
+]

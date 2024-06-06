@@ -1,0 +1,14 @@
+1. Să se citească și să se afișeze informațiile despre cărțile din fișierul biblioteca.xml.
+2. Să se citească și să se afișeze informațiile despre cititorii din fișierul cititori.json.
+3. Să se afișeze numărul total de pagini pentru fiecare gen de carte.
+4. Să se afișeze cititorii care au împrumutat cel puțin două cărți, ordonați alfabetic.
+5. Să se scrie informațiile despre cărți într-un fișier JSON numit carti.json.
+6. Să se scrie informațiile despre cititori într-un fișier XML numit cititori.xml.
+7. Să se creeze și să se scrie informațiile despre cărți într-o bază de date SQLite biblioteca.db.
+
+8. Comunicare Client-Server
+
+Să se implementeze funcționalitățile de server și client TCP/IP pentru a realiza următorul scenariu:
+Clientul trimite serverului numele unui cititor.
+Serverul răspunde cu lista de cărți împrumutate de acel cititor.
+Serverul poate servi oricâte cereri simultan.

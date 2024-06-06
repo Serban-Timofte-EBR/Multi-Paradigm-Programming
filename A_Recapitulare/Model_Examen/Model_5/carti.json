@@ -1,0 +1,44 @@
+[
+    {
+        "Gen": "Informatica",
+        "Numar Pagini": 400,
+        "Autor": "Alexandru Vasilescu",
+        "Titlu": "Introducere in algoritmi"
+    },
+    {
+        "Gen": "Matematica",
+        "Numar Pagini": 250,
+        "Autor": "Andreea Popa",
+        "Titlu": "Ghid de matematica"
+    },
+    {
+        "Gen": "Istorie",
+        "Numar Pagini": 200,
+        "Autor": "Elena Georgescu",
+        "Titlu": "Istoria antica"
+    },
+    {
+        "Gen": "Matematica",
+        "Numar Pagini": 350,
+        "Autor": "George Ionescu",
+        "Titlu": "Analiza matematica"
+    },
+    {
+        "Gen": "Istorie",
+        "Numar Pagini": 450,
+        "Autor": "Ioan Grigorescu",
+        "Titlu": "Razboaiele mondiale"
+    },
+    {
+        "Gen": "Informatica",
+        "Numar Pagini": 500,
+        "Autor": "Ion Popescu",
+        "Titlu": "Programare in Java"
+    },
+    {
+        "Gen": "Informatica",
+        "Numar Pagini": 300,
+        "Autor": "Maria Ionescu",
+        "Titlu": "Bazele informaticii"
+    }
+]

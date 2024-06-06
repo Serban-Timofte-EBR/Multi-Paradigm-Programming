@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<biblioteca>
+    <carte>
+        <titlu>Programare in Java</titlu>
+        <autor>Ion Popescu</autor>
+        <gen>Informatica</gen>
+        <numarPagini>500</numarPagini>
+    </carte>
+    <carte>
+        <titlu>Bazele informaticii</titlu>
+        <autor>Maria Ionescu</autor>
+        <gen>Informatica</gen>
+        <numarPagini>300</numarPagini>
+    </carte>
+    <carte>
+        <titlu>Introducere in algoritmi</titlu>
+        <autor>Alexandru Vasilescu</autor>
+        <gen>Informatica</gen>
+        <numarPagini>400</numarPagini>
+    </carte>
+    <carte>
+        <titlu>Ghid de matematica</titlu>
+        <autor>Andreea Popa</autor>
+        <gen>Matematica</gen>
+        <numarPagini>250</numarPagini>
+    </carte>
+    <carte>
+        <titlu>Analiza matematica</titlu>
+        <autor>George Ionescu</autor>
+        <gen>Matematica</gen>
+        <numarPagini>350</numarPagini>
+    </carte>
+    <carte>
+        <titlu>Istoria antica</titlu>
+        <autor>Elena Georgescu</autor>
+        <gen>Istorie</gen>
+        <numarPagini>200</numarPagini>
+    </carte>
+    <carte>
+        <titlu>Razboaiele mondiale</titlu>
+        <autor>Ioan Grigorescu</autor>
+        <gen>Istorie</gen>
+        <numarPagini>450</numarPagini>
+    </carte>
+</biblioteca>
