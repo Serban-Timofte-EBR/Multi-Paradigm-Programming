@@ -1,0 +1,13 @@
+-- Crearea tabelei proiecte_finalizate
+CREATE TABLE IF NOT EXISTS proiecte_finalizate (
+    cod_proiect INTEGER PRIMARY KEY,
+    nume_proiect TEXT,
+    an_finalizare INTEGER
+);
+
+-- Popularea tabelei cu date
+INSERT INTO proiecte_finalizate (cod_proiect, nume_proiect, an_finalizare) VALUES (101, 'Proiect A', 2022);
+INSERT INTO proiecte_finalizate (cod_proiect, nume_proiect, an_finalizare) VALUES (102, 'Proiect B', 2021);
+INSERT INTO proiecte_finalizate (cod_proiect, nume_proiect, an_finalizare) VALUES (103, 'Proiect C', 2023);
+INSERT INTO proiecte_finalizate (cod_proiect, nume_proiect, an_finalizare) VALUES (104, 'Proiect D', 2020);
+INSERT INTO proiecte_finalizate (cod_proiect, nume_proiect, an_finalizare) VALUES (105, 'Proiect E', 2023);
