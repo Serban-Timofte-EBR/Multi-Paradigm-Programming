@@ -1,0 +1,66 @@
+Subiect de examen Java
+Context:
+
+Firma XYZ dorește să dezvolte o aplicație Java pentru gestionarea și analizarea datelor despre angajați și proiecte. Datele sunt stocate în diferite formate: CSV, JSON, XML și o bază de date SQLite.
+
+Cerințe:
+
+1. Citirea datelor din fișiere CSV
+
+    1.1. Fișierul angajati.csv conține informații despre angajați:
+
+    id (intreg, cheie primară)
+    nume (șir de caractere)
+    departament (șir de caractere)
+    salariu (double)
+
+    Exemplu:
+    1, Ion Popescu, IT, 5000
+    2, Maria Ionescu, HR, 4500
+    3, Dan Georgescu, Marketing, 4700
+
+2. Citirea datelor din fișiere JSON
+
+    2.1. Fișierul proiecte.json conține informații despre proiecte:
+
+    cod_proiect (intreg)
+    nume_proiect (șir de caractere)
+    buget (double)
+    echipa (listă de id-uri ale angajaților)
+
+3. Citirea datelor din fișiere XML
+
+    3.1. Fișierul evaluari.xml conține informații despre evaluările anuale ale angajaților:
+
+    id_angajat (intreg)
+    an (intreg)
+    scor (double)
+
+4. Citirea datelor dintr-o bază de date SQLite
+
+    4.1. Baza de date proiecte.db conține o tabelă numită proiecte_finalizate cu următoarele coloane:
+
+    cod_proiect (intreg)
+    nume_proiect (șir de caractere)
+    an_finalizare (intreg)
+
+5. Lucrul cu streamuri și colectori
+
+    5.1. Să se afișeze salariul total pe departamente, ordonat descrescător după salariul total.
+
+    5.2. Să se afișeze angajații cu salariul mai mare decât media salariilor din departamentul lor, ordonat alfabetic după nume.
+
+    5.3. Să se afișeze top 3 angajați cu cele mai mari salarii.
+
+6. Scrierea datelor în fișiere
+
+    6.1. Să se salveze lista de angajați într-un fișier binar denumit angajati.bin.
+
+    6.2. Să se salveze lista de proiecte într-un fișier JSON denumit proiecte_finalizate.json.
+
+    6.3. Să se salveze lista de evaluări într-un fișier XML denumit evaluari_finale.xml.
+
+7. Comunicarea client-server TCP/IP
+
+    7.1. Să se implementeze un server TCP/IP care primește de la client un id_angajat și returnează numele angajatului și salariul acestuia.
+    Serverul trebuie să fie multithreaded și să răspundă la mai multe cereri simultan.

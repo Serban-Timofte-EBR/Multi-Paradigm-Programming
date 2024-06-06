@@ -1,0 +1,12 @@
+<evaluari>
+    <evaluare>
+        <id_angajat>1</id_angajat>
+        <an>2023</an>
+        <scor>4.5</scor>
+    </evaluare>
+    <evaluare>
+        <id_angajat>2</id_angajat>
+        <an>2023</an>
+        <scor>4.7</scor>
+    </evaluare>
+</evaluari>
