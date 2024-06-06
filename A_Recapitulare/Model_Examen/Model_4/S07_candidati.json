@@ -1,0 +1,80 @@
+[
+  {
+    "nume": "Popescu Ion",
+    "optiuni": [
+      { "codProgram": 28, "punctaj": 7.46 },
+      { "codProgram": 30, "punctaj": 6.45 }
+    ]
+  },
+  {
+    "nume": "Ionescu Maria",
+    "optiuni": [
+      { "codProgram": 30, "punctaj": 8.12 },
+      { "codProgram": 45, "punctaj": 7.88 },
+      { "codProgram": 43, "punctaj": 7.55 }
+    ]
+  },
+  {
+    "nume": "Dinu Gabriela",
+    "optiuni": [
+      { "codProgram": 28, "punctaj": 9.30 },
+      { "codProgram": 30, "punctaj": 8.20 },
+      { "codProgram": 43, "punctaj": 8.10 }
+    ]
+  },
+  {
+    "nume": "Constantin Alexandru",
+    "optiuni": [
+      { "codProgram": 28, "punctaj": 7.50 },
+      { "codProgram": 30, "punctaj": 6.50 },
+      { "codProgram": 45, "punctaj": 8.40 }
+    ]
+  },
+  {
+    "nume": "Vasile Mihai",
+    "optiuni": [
+      { "codProgram": 28, "punctaj": 8.70 },
+      { "codProgram": 30, "punctaj": 8.60 }
+    ]
+  },
+  {
+    "nume": "Marin Adrian",
+    "optiuni": [
+      { "codProgram": 28, "punctaj": 7.20 },
+      { "codProgram": 30, "punctaj": 8.50 },
+      { "codProgram": 43, "punctaj": 8.00 },
+      { "codProgram": 45, "punctaj": 7.75 }
+    ]
+  },
+  {
+    "nume": "Ilie Stefan",
+    "optiuni": [
+      { "codProgram": 28, "punctaj": 6.90 },
+      { "codProgram": 45, "punctaj": 7.45 }
+    ]
+  },
+  {
+    "nume": "Georgescu Andreea",
+    "optiuni": [
+      { "codProgram": 30, "punctaj": 8.90 },
+      { "codProgram": 43, "punctaj": 8.75 },
+      { "codProgram": 45, "punctaj": 9.00 }
+    ]
+  },
+  {
+    "nume": "Radu Ioana",
+    "optiuni": [
+      { "codProgram": 28, "punctaj": 7.85 },
+      { "codProgram": 30, "punctaj": 8.20 },
+      { "codProgram": 45, "punctaj": 7.95 }
+    ]
+  },
+  {
+    "nume": "Neagu Valentin",
+    "optiuni": [
+      { "codProgram": 28, "punctaj": 7.00 },
+      { "codProgram": 30, "punctaj": 7.50 },
+      { "codProgram": 45, "punctaj": 8.00 }
+    ]
+  }
+]
