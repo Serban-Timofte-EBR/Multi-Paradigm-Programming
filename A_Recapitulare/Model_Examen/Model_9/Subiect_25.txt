@@ -1,0 +1,58 @@
+In fisierul santiere.json se află informații privind santierele deschise de o companie de constructii.
+Informatiile sunt urmatoarele:
+cod santier (intreg), localitate (sir), strada (sir), obiectiv (sir),
+valoare (valoare estimata prin autorizatia de constructie - real).
+
+În tabela CAPITOLE a bazei de date devize.db se află informații privind capitolele de cheltuieli operate.
+Câmpurile tabelei sunt:
+cod_capitol (întreg), cod_santier (codul santierului - intreg), denumire cheltuiala (text), um (unitate de masura - text),
+cantitate (real), pu (pret unitar - real).
+Campul cod_capitol nu este cheie unica, pot exista mai multe cheltuieli la acelasi capitol.
+Exemplu:
+1,1,Fier beton,kg,13000.0,0.8
+2,1,Manopera fier beton,h,300.0,30.0
+1,2,Caramida,palet,26.0,500.0
+...
+
+Să se scrie o aplicație Java care să îndeplinească următoarele cerințe:
+
+1) Să afișeze la consolă santierele si valoarea medie estimata a acestora
+(media valorilor estimate prin autorizatiile de constructie).
+Punctaj: 2 puncte.
+Criteriu de acordare a punctajului: afișarea corectă la consolă.
+
+2) Să afișeze la consolă cantitatile totale pentru fiecare capitol, astfel:
+cod capitol,cantitate
+...
+
+Punctaj: 2 puncte.
+Criteriu de acordare a punctajului: afișarea corectă la consolă.
+
+3) Să salveze în fișierul devize.txt o situație a cheltuielilor la nivel de capitole,
+cu sumarizare pe santiere, astfel:
+
+cod capitol
+cod santier,valoare
+cod santier,valoare
+...
+cod capitol
+cod santier,valoare
+cod santier,valoare
+...
+
+unde 'valoare' se calculeaza prin inmultirea cantitatii cu pretul unitar.
+
+Punctaj: 2 puncte.
+Criteriu de acordare a punctajului: verificarea fișierului text.
+
+4) Să implementeze funcționalitățile de server și client TCP/IP și să se execute următorul scenariu:
+componenta client TCP/IP trimite serverului un cod de santier, iar componenta server va întoarce clientului TCP
+obiectivul corespunzator si valoarea estimata a obiectivului.
+Componenta server poate servi oricâte cereri.
+
+Punctaj:
+1 punct - afișarea la consolă de către server a codului de santier primit
+1 punct - implementare server multithreaded (fiecare cerere este deservită de un thread independent)
+1 punct - afișarea la consolă de către componenta client a raspunsului corespunzător
+Criteriu de acordare a punctajului: afișarea corectă la consolă
+

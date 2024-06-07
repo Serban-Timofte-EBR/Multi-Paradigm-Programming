@@ -1,0 +1,8 @@
+[
+  { "Cod Santier": 1,"Localitate": "Corbeanca", "Strada":"Planorului" ,"Obiectiv": "Casa parter/etaj", "Valoare": 150000},
+  { "Cod Santier": 2,"Localitate": "Corbeanca", "Strada":"Soarelui" ,"Obiectiv": "Complex locuinte p+5", "Valoare": 1000000},
+  { "Cod Santier": 3,"Localitate": "Ostratu", "Strada":"Hipodromului" ,"Obiectiv": "Casa parter", "Valoare": 200000},
+  { "Cod Santier": 4,"Localitate": "Otopeni", "Strada":"23 August" ,"Obiectiv": "Complex case parter/etaj", "Valoare": 1500000},
+  { "Cod Santier": 5,"Localitate": "Corbeanca", "Strada":"Planorului" ,"Obiectiv": "Casa parter plus etaj", "Valoare": 250000},
+  { "Cod Santier": 6,"Localitate": "Bucuresti", "Strada":"Soseaua Pipera" ,"Obiectiv": "Complex locuinte p+5", "Valoare": 3000000}
+]
