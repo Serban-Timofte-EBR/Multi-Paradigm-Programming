@@ -1,0 +1,17 @@
+[
+    {
+        "nume_proiect": "Proiect A",
+        "cod_proiect": "101",
+        "an_finalizare": "2022"
+    },
+    {
+        "nume_proiect": "Proiect C",
+        "cod_proiect": "103",
+        "an_finalizare": "2023"
+    },
+    {
+        "nume_proiect": "Proiect E",
+        "cod_proiect": "105",
+        "an_finalizare": "2023"
+    }
+]
