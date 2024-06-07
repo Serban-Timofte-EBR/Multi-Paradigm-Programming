@@ -1,0 +1,39 @@
+a) Fisierul "516 discipline.txt continand informatii despre salile de studiu:
+abisciplina (integer)
+venucre string)
+1ão (strine)
+exemplu continut fisier "S15 sali, txt".
+028,0005.101
+947.0818.5
+b Tabela "Programari" in baza de date Solite "$16 programari.db" cu urmatoarele coloane:
+21
+TEXTI
+1doisclosina INTEGER
+Formatte
+Cerinten
+2p - 1) Sa se citeasca datele din fisierul "516 discipline.txt" si sa se afiseze la consola lista de discipline optionale
+exemplu:
+CERINTA
+discioline optionale:
+Antreprenoriat in comert turism 51 servic11
+Econonia intormaciel centale cu aplicatil in afacera
+p - 2) Sa se citeasca datele din baza de date si sa se afiseze la consola lista de cursuri din zia de vineri (zi, interva, sala, disciplina) ordonate crescator in functie de sala
+disciplines, 1p- sortarea listel)
+Exemolu:
+CERINTA 2 - Lista cursuri programate viner.: vinert.
+Ora908. 2101, Managementul riscului in afaceri internationale
+Viners, Ora1030, 2101, Managementul riscului in afaceri internationale
+20 - 3) Pentru o denumire de salá introdusa de la consolà sa se afiseze lista de programari in formatul: 21, interval, disciplina, fornatie.
+Exerplu:
+C50128315cta de progranar1 pencru Sa-d 2202
+Lunl
+Ora1500, Programare mulaparadigid
+Lund,
+0г01200,
+SGED oracle. E-INF
+CINE
+2p
+4) Sa se imolenenteze functionalitatile de server si client TCP/IP si so se execute urnatorul scenariu:
+componenta client trimite serverului o denumire de formatie de studiu;
+comconents server
+va intoarce clientului lista de cursunt programate.

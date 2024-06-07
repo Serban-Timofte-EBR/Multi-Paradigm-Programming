@@ -1,0 +1,14 @@
+[
+    {
+        "Disciplina": "Matematica Aplicata",
+        "Sala": "A102",
+        "Zi": "Marti",
+        "Ora": "10:00-12:00"
+    },
+    {
+        "Disciplina": "Economia informatiei centrale cu aplicatii in afaceri",
+        "Sala": "A102",
+        "Zi": "Vineri",
+        "Ora": "10:00-12:00"
+    }
+]

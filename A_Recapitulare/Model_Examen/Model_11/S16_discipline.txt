@@ -1,0 +1,4 @@
+028,Matematica Aplicata,obligatorie
+947,Antreprenoriat in comert turism si servicii,optionala
+105,Economia informatiei centrale cu aplicatii in afaceri,optionala
+081,Informatica Aplicata,obligatorie
