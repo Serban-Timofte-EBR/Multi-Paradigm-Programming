@@ -1,0 +1,74 @@
+<costuri>
+    <cost>
+        <cod_cost>1</cod_cost>
+        <cod_proiect>1</cod_proiect>
+        <denumire_cost>Licențe software</denumire_cost>
+        <um>unitate</um>
+        <cantitate>50.0</cantitate>
+        <pu>100.0</pu>
+    </cost>
+    <cost>
+        <cod_cost>2</cod_cost>
+        <cod_proiect>1</cod_proiect>
+        <denumire_cost>Consultanță</denumire_cost>
+        <um>ora</um>
+        <cantitate>300.0</cantitate>
+        <pu>150.0</pu>
+    </cost>
+    <cost>
+        <cod_cost>1</cod_cost>
+        <cod_proiect>2</cod_proiect>
+        <denumire_cost>Echipamente</denumire_cost>
+        <um>unitate</um>
+        <cantitate>20.0</cantitate>
+        <pu>2000.0</pu>
+    </cost>
+    <cost>
+        <cod_cost>3</cod_cost>
+        <cod_proiect>3</cod_proiect>
+        <denumire_cost>Materiale de construcție</denumire_cost>
+        <um>kg</um>
+        <cantitate>1000.0</cantitate>
+        <pu>5.0</pu>
+    </cost>
+    <cost>
+        <cod_cost>4</cod_cost>
+        <cod_proiect>4</cod_proiect>
+        <denumire_cost>Software</denumire_cost>
+        <um>licență</um>
+        <cantitate>10.0</cantitate>
+        <pu>300.0</pu>
+    </cost>
+    <cost>
+        <cod_cost>5</cod_cost>
+        <cod_proiect>5</cod_proiect>
+        <denumire_cost>Consultanță IT</denumire_cost>
+        <um>ora</um>
+        <cantitate>150.0</cantitate>
+        <pu>200.0</pu>
+    </cost>
+    <cost>
+        <cod_cost>6</cod_cost>
+        <cod_proiect>6</cod_proiect>
+        <denumire_cost>Echipamente</denumire_cost>
+        <um>unitate</um>
+        <cantitate>40.0</cantitate>
+        <pu>2500.0</pu>
+    </cost>
+    <cost>
+        <cod_cost>7</cod_cost>
+        <cod_proiect>7</cod_proiect>
+        <denumire_cost>Servicii de marketing</denumire_cost>
+        <um>campanie</um>
+        <cantitate>5.0</cantitate>
+        <pu>10000.0</pu>
+    </cost>
+    <cost>
+        <cod_cost>8</cod_cost>
+        <cod_proiect>8</cod_proiect>
+        <denumire_cost>Consultanță SEO</denumire_cost>
+        <um>ora</um>
+        <cantitate>50.0</cantitate>
+        <pu>300.0</pu>
+    </cost>
+</costuri>

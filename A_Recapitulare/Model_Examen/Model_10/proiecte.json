@@ -1,0 +1,58 @@
+[
+  {
+    "cod_proiect": 1,
+    "nume": "Proiect Alpha",
+    "descriere": "Implementare sistem ERP",
+    "manager": "Ion Popescu",
+    "buget": 50000.0
+  },
+  {
+    "cod_proiect": 2,
+    "nume": "Proiect Beta",
+    "descriere": "Dezvoltare aplicatie mobila",
+    "manager": "Maria Ionescu",
+    "buget": 75000.0
+  },
+  {
+    "cod_proiect": 3,
+    "nume": "Proiect Gamma",
+    "descriere": "Implementare sistem CRM",
+    "manager": "Ion Popescu",
+    "buget": 60000.0
+  },
+  {
+    "cod_proiect": 4,
+    "nume": "Proiect Delta",
+    "descriere": "Migratie cloud",
+    "manager": "Ana Georgescu",
+    "buget": 80000.0
+  },
+  {
+    "cod_proiect": 5,
+    "nume": "Proiect Epsilon",
+    "descriere": "Implementare BI",
+    "manager": "Maria Ionescu",
+    "buget": 45000.0
+  },
+  {
+    "cod_proiect": 6,
+    "nume": "Proiect Zeta",
+    "descriere": "Dezvoltare platforma ecommerce",
+    "manager": "Ion Popescu",
+    "buget": 90000.0
+  },
+  {
+    "cod_proiect": 7,
+    "nume": "Proiect Eta",
+    "descriere": "Optimizare SEO",
+    "manager": "Ana Georgescu",
+    "buget": 35000.0
+  },
+  {
+    "cod_proiect": 8,
+    "nume": "Proiect Theta",
+    "descriere": "Dezvoltare website corporativ",
+    "manager": "Ion Popescu",
+    "buget": 30000.0
+  }
+]

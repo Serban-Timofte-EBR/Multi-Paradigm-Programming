@@ -1,0 +1,79 @@
+În fișierul proiecte.json se află informații privind proiectele unei companii. Informațiile sunt următoarele:
+
+cod_proiect (intreg)
+nume (sir)
+descriere (sir)
+manager (sir)
+buget (valoare reală)
+
+În fișierul costuri.xml se află informații privind costurile asociate proiectelor. Structura fișierului XML este următoarea:
+
+xml
+Copy code
+<costuri>
+    <cost>
+        <cod_cost>1</cod_cost>
+        <cod_proiect>1</cod_proiect>
+        <denumire_cost>Licențe software</denumire_cost>
+        <um>unitate</um>
+        <cantitate>50.0</cantitate>
+        <pu>100.0</pu>
+    </cost>
+    <cost>
+        <cod_cost>2</cod_cost>
+        <cod_proiect>1</cod_proiect>
+        <denumire_cost>Consultanță</denumire_cost>
+        <um>ora</um>
+        <cantitate>300.0</cantitate>
+        <pu>150.0</pu>
+    </cost>
+    <cost>
+        <cod_cost>1</cod_cost>
+        <cod_proiect>2</cod_proiect>
+        <denumire_cost>Echipamente</denumire_cost>
+        <um>unitate</um>
+        <cantitate>20.0</cantitate>
+        <pu>2000.0</pu>
+    </cost>
+    ...
+</costuri>
+
+Cerințe
+
+Să se afișeze la consolă managerii și bugetul total estimat pentru proiectele acestora.
+Punctaj: 2 puncte.
+Criteriu de acordare a punctajului: afișarea corectă la consolă.
+Afișare cantități totale pentru fiecare cost
+
+Să se afișeze la consolă cantitățile totale pentru fiecare cost, astfel:
+
+cod_cost,cantitate
+...
+Punctaj: 2 puncte.
+Criteriu de acordare a punctajului: afișarea corectă la consolă.
+Salvare situație cheltuieli în fișier text
+
+Să se salveze în fișierul bugete.xml o situație a cheltuielilor la nivel de capitole, cu sumarizare pe proiecte, astfel:
+python
+Copy code
+cod_cost
+cod_proiect,valoare
+cod_proiect,valoare
+...
+cod_cost
+cod_proiect,valoare
+...
+unde 'valoare' se calculează prin înmulțirea cantității cu prețul unitar.
+Punctaj: 2 puncte.
+Criteriu de acordare a punctajului: verificarea fișierului text.
+
+Implementare funcționalități TCP/IP
+
+Să se implementeze funcționalitățile de server și client TCP/IP și să se execute următorul scenariu:
+Componenta client TCP/IP trimite serverului un cod de proiect, iar componenta server va întoarce clientului TCP numele proiectului și valoarea bugetului corespunzător.
+Componenta server poate servi oricâte cereri.
+Punctaj:
+1 punct - afișarea la consolă de către server a codului de proiect primit.
+1 punct - implementare server multithreaded (fiecare cerere este deservită de un thread independent).
+1 punct - afișarea la consolă de către componenta client a răspunsului corespunzător.
+Criteriu de acordare a punctajului: afișarea corectă la consolă
