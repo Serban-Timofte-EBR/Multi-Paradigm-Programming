@@ -11,13 +11,13 @@ public class Server {
         List<Curs> cursuriFormatie = cursuri.stream()
                 .filter(curs -> curs.getFormatie().equals(formatie))
                 .toList();
-
+        cursuriFormatie.forEach(System.out::println);
         String raspuns = "";
         for(Curs curs : cursuriFormatie) {
             Disciplina disciplina = discipline.stream().filter(disc -> disc.getCodDisciplina() == curs.getCodDisciplina())
                     .findFirst().get();
             raspuns = raspuns + " Zi: " + curs.getZi() + " Ora: " + curs.getInterval() +
-                    " Sala: " + curs.getSala() + " Denumire: " + disciplina.getDenumire() + "\n";
+                    " Sala: " + curs.getSala() + " Denumire: " + disciplina.getDenumire() + "\t\t\t";
         }
         return raspuns;
 
