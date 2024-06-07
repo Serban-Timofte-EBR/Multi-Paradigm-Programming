@@ -1,0 +1,7 @@
+Nume Student                   - Total zile imprumut
+Maria Butoi                   - 50
+Tudor Carstea                   - 34
+Adrei Spataru                   - 32
+Alina Mavrodin                   - 25
+Maria Popescu                   - 20
+Carla Filote                   - 20

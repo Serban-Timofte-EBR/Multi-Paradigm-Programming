@@ -1,0 +1,76 @@
+Fie următoarele surse de date:
+
+a) O colectie de carti, fiecare carte avand urmatoarele atribute: cota carte, titlu carte, 
+autor, anul aparitiei.
+
+Datele se regăsesc într-un fișier text de forma (campuri separate cu TAB):
+
+Cota_0011	Străinul	Albert Camus 	1942
+Cota_0012	În căutarea timpului pierdut	Marcel Proust	1927
+Cota_0013	Procesul	Franz Kafka	1925
+Cota_0014	Micul Prinț	Antoine de Saint-Exupéry	1943
+Cota_0015	Condiția umană	André Malraux	1933
+...
+
+b) Imprumuturi realizate de cititori (nume cititor, cota carte, nr. zile de imprumut)
+
+Datele se regăses într-o bază de date SQLite (biblioteca.db) în tabela Imprumuturi.
+
+Exemplu de valori:
+...
+Maria Butoi	    Cota_0023	6
+Maria Butoi	    Cota_0024	5
+Maria Butoi	    Cota_0025	9
+Adrei Spataru	Cota_0011	5
+Adrei Spataru	Cota_0012	7
+Adrei Spataru	Cota_0013	3
+...
+
+
+CERINȚE:
+
+1. (2p) Să se citească cartile din fisierul text si sa se tipareasca la consola cartile publicate
+inainte de 1940, ordonate alfabetic dupa titlul cartii, în formatul:
+
+Cota_0027  Alcooluri                      Guillaume Apollinaire            1913
+Cota_0015  Condiția umană                 André Malraux                    1933
+Cota_0016  Călătorie la capătul nopții    Louis-Ferdinand Céline           1932
+...
+
+2. (2p) Să se citească răspunsurile din baza de date și să se afișeze la consola lista cititorilor
+care au imprumutat carti, in formatul:
+
+Maria Butoi
+Adrei Spataru
+...
+
+3. (3p) Să se genereze un fișier text care să conțină lista de cititori ordonată descrescător 
+în funcție de numarul total de zile de imprumut a cartilor:
+
+Nume Student                   - Total zile imprumut
+Maria Butoi                    -   50
+Adrei Spataru                  -   37
+...
+
+(1p - generare fișier text cu lista de studenți,
+1p - calcul corect total zile de imprumut,
+1p - sortare)
+
+4. (2p) Să se implementeze funcționalitățile de server și client TCP/IP și să se
+execute următorul scenariu: componenta client trimite serverului o cota de carte
+iar componenta server va întoarce clientului titlul cartii, autorul si anul aparitiei.
+
+Server-ul este pornit pe thread secundar din funcția main.
+Server-ul se oprește după ce a servit o conexiune.
+
+Componenta client trimite serverului cota unei carti.
+Componenta server va întoarce clientului titlul, autorul si anul aparitiei cartii.
+Componentele server și client trebuie lansate folosind fire de execuție din programul principal.
+
+Observații:
+
+1p din oficiu
+Criteriu de acordare a punctajului: afișarea corectă conform cerinței
+Nu se acordă punctaj parțial pentru cerințe
+Nu se acordă punctaj pentru programe cu erori de compilare sau de execuție
+

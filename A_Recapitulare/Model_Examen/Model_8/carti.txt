@@ -1,0 +1,24 @@
+Cota_0011	Străinul	Albert Camus 	1942
+Cota_0012	În căutarea timpului pierdut	Marcel Proust	1927
+Cota_0013	Procesul	Franz Kafka	1925
+Cota_0014	Micul Prinț	Antoine de Saint-Exupéry	1943
+Cota_0015	Condiția umană	André Malraux	1933
+Cota_0016	Călătorie la capătul nopții	Louis-Ferdinand Céline	1932
+Cota_0017	Fructele mâniei	John Steinbeck 	1939
+Cota_0018	Pentru cine bat clopotele	Ernest Hemingway 	1940
+Cota_0019	Cărarea pierdută	Alain-Fournier	1913
+Cota_0020	Spuma zilelor	Boris Vian	1947
+Cota_0021	Al doilea sex	Simone de Beauvoir	1949
+Cota_0022	Așteptându-l pe Godot	Samuel Beckett 	1952
+Cota_0023	Ființa și neantul	Jean-Paul Sartre []	1943
+Cota_0024	Numele trandafirului	Umberto Eco	1980
+Cota_0025	Arhipelagul Gulag	Aleksandr Soljenițîn 	1973
+Cota_0026	Paroles fr	Jacques Prévert	1946
+Cota_0027	Alcooluri	Guillaume Apollinaire	1913
+Cota_0028	Le lotus bleu fr	Hergé	1936
+Cota_0029	Jurnalul Annei Frank	Anne Frank	1947
+Cota_0030	Tropice triste	Claude Lévi-Strauss	1955
+Cota_0031	Minunata lume nouă	Aldous Huxley	1932
+Cota_0032	O mie nouă sute optzeci și patru	George Orwell	1949
+Cota_0033	Astérix le Gaulois fr	René Goscinny și Albert Uderzo	1959
+Cota_0034	Cântăreața cheală	Eugen Ionesco	1952
