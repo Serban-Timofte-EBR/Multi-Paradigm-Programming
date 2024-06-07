@@ -1,0 +1,106 @@
+Fisierul S07_candidati.json conține lista de candidați și opțiunile acestora în următorul format:
+
+[
+  {
+    "nume": "Popescu Ion",
+    "optiuni": [
+      { "codProgram": 28, "punctaj": 7.46 },
+      { "codProgram": 29, "punctaj": 6.45 }
+    ]
+  },
+  {
+    "nume": "Ionescu Maria",
+    "optiuni": [
+      { "codProgram": 30, "punctaj": 8.12 },
+      { "codProgram": 31, "punctaj": 7.88 },
+      { "codProgram": 32, "punctaj": 6.75 }
+    ]
+  },
+ ...
+]
+
+Fisierul S07_programe.xml conține informații despre programele de studiu în următorul format:
+
+<programe>
+  <program>
+    <codProgram>28</codProgram>
+    <denumire>Informatica</denumire>
+    <nrLocuri>50</nrLocuri>
+  </program>
+ ...
+</programe>
+
+Cerinte:
+
+Citirea și afișarea datelor din S07_candidati.json.
+
+Să se citească datele din fișierul S07_candidati.json și să se afișeze la consolă lista de candidați și numărul de opțiuni ale fiecăruia.
+Exemplu output:
+
+less
+Copy code
+CERINTA 1: Lista candidați și numărul de opțiuni
+Popescu Ion - 2 opțiuni
+Ionescu Maria - 3 opțiuni
+Georgescu Andrei - 2 opțiuni
+Vasilescu Elena - 2 opțiuni
+Constantinescu Mihai - 2 opțiuni
+Citirea și afișarea datelor din S07_programe.xml.
+
+Să se citească datele din fișierul S07_programe.xml și să se afișeze la consolă lista programelor și numărul de locuri disponibile ordonate descrescător după numărul de locuri.
+Exemplu output:
+
+yaml
+Copy code
+CERINTA 2: Lista programe ordonate descrescător după numărul de locuri
+Informatica - 50 locuri
+Matematica - 40 locuri
+Fizica - 30 locuri
+Biologie - 25 locuri
+Chimie - 20 locuri
+Calculul bugetului total estimat pentru fiecare manager și scrierea rezultatului într-un fișier JSON.
+
+
+Să se creeze o tabelă OpțiuniCandidati în baza de date SQLite admitere.db cu următoarele câmpuri:
+nume (TEXT)
+codProgram (INTEGER)
+punctaj (REAL)
+Să se insereze datele corespunzătoare fiecărui candidat și opțiunile acestuia.
+Calculul și afișarea mediei punctajelor pentru fiecare program de studiu.
+
+Să se calculeze și să se afișeze la consolă media punctajelor pentru fiecare program de studiu.
+Exemplu output:
+
+
+CERINTA 4: Media punctajelor pentru fiecare program de studiu
+Informatica - 7.58
+Matematica - 7.48
+Fizica - 8.04
+Chimie - 7.89
+Biologie - 7.38
+Comunicare client-server TCP/IP.
+
+Componenta client va trimite serverului denumirea unui program de studiu.
+Componenta server va returna clientului lista de candidați înscriși la programul respectiv.
+Serverul va fi multithreaded, putând deservi multiple cereri simultan.
+Exemplu de output server:
+
+css
+Copy code
+Serverul a primit denumirea programului: Informatica
+Exemplu de output client:
+
+css
+Copy code
+Candidați înscriși la programul Informatica:
+Popescu Ion - 7.46
+Constantinescu Mihai - 7.70
+Script SQL pentru a crea tabela OpțiuniCandidati:
+sql
+Copy code
+CREATE TABLE IF NOT EXISTS OptiuniCandidati (
+    nume TEXT,
+    codProgram INTEGER,
+    punctaj REAL
+);
+

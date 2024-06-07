@@ -1,0 +1,27 @@
+<programe>
+    <program>
+        <codProgram>28</codProgram>
+        <denumire>Informatica</denumire>
+        <nrLocuri>50</nrLocuri>
+    </program>
+    <program>
+        <codProgram>29</codProgram>
+        <denumire>Matematica</denumire>
+        <nrLocuri>40</nrLocuri>
+    </program>
+    <program>
+        <codProgram>30</codProgram>
+        <denumire>Fizica</denumire>
+        <nrLocuri>30</nrLocuri>
+    </program>
+    <program>
+        <codProgram>31</codProgram>
+        <denumire>Chimie</denumire>
+        <nrLocuri>20</nrLocuri>
+    </program>
+    <program>
+        <codProgram>32</codProgram>
+        <denumire>Biologie</denumire>
+        <nrLocuri>25</nrLocuri>
+    </program>
+</programe>

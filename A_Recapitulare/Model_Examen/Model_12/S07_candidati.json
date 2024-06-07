@@ -1,0 +1,38 @@
+[
+  {
+    "nume": "Popescu Ion",
+    "optiuni": [
+      { "codProgram": 28, "punctaj": 7.46 },
+      { "codProgram": 29, "punctaj": 6.45 }
+    ]
+  },
+  {
+    "nume": "Ionescu Maria",
+    "optiuni": [
+      { "codProgram": 30, "punctaj": 8.12 },
+      { "codProgram": 31, "punctaj": 7.88 },
+      { "codProgram": 32, "punctaj": 6.75 }
+    ]
+  },
+  {
+    "nume": "Georgescu Andrei",
+    "optiuni": [
+      { "codProgram": 30, "punctaj": 9.10 },
+      { "codProgram": 32, "punctaj": 8.00 }
+    ]
+  },
+  {
+    "nume": "Vasilescu Elena",
+    "optiuni": [
+      { "codProgram": 29, "punctaj": 8.50 },
+      { "codProgram": 31, "punctaj": 7.90 }
+    ]
+  },
+  {
+    "nume": "Constantinescu Mihai",
+    "optiuni": [
+      { "codProgram": 28, "punctaj": 7.70 },
+      { "codProgram": 30, "punctaj": 6.90 }
+    ]
+  }
+]
