@@ -1,0 +1,32 @@
+[
+  {
+    "codDepartament": 1,
+    "denumire": "IT",
+    "manager": "Radu Ionescu",
+    "buget": 1500000.0
+  },
+  {
+    "codDepartament": 2,
+    "denumire": "HR",
+    "manager": "Maria Ionescu",
+    "buget": 800000.0
+  },
+  {
+    "codDepartament": 3,
+    "denumire": "Finance",
+    "manager": "George Georgescu",
+    "buget": 1200000.0
+  },
+  {
+    "codDepartament": 4,
+    "denumire": "Marketing",
+    "manager": "Ana Vasilescu",
+    "buget": 950000.0
+  },
+  {
+    "codDepartament": 5,
+    "denumire": "Sales",
+    "manager": "Vasile Radu",
+    "buget": 1300000.0
+  }
+]

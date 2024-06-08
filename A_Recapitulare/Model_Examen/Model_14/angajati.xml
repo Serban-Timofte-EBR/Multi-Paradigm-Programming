@@ -1,0 +1,44 @@
+<angajati>
+    <angajat>
+        <codAngajat>1</codAngajat>
+        <nume>Ioana Popa</nume>
+        <departament>1</departament>
+        <salariu>7500.0</salariu>
+    </angajat>
+    <angajat>
+        <codAngajat>2</codAngajat>
+        <nume>Radu Ionescu</nume>
+        <departament>1</departament>
+        <salariu>6500.0</salariu>
+    </angajat>
+    <angajat>
+        <codAngajat>3</codAngajat>
+        <nume>Elena Georgescu</nume>
+        <departament>2</departament>
+        <salariu>5000.0</salariu>
+    </angajat>
+    <angajat>
+        <codAngajat>4</codAngajat>
+        <nume>Alexandru Vasile</nume>
+        <departament>3</departament>
+        <salariu>8500.0</salariu>
+    </angajat>
+    <angajat>
+        <codAngajat>5</codAngajat>
+        <nume>Violeta Popescu</nume>
+        <departament>3</departament>
+        <salariu>8200.0</salariu>
+    </angajat>
+    <angajat>
+        <codAngajat>6</codAngajat>
+        <nume>Florin Vasilescu</nume>
+        <departament>4</departament>
+        <salariu>5500.0</salariu>
+    </angajat>
+    <angajat>
+        <codAngajat>7</codAngajat>
+        <nume>Andreea Radu</nume>
+        <departament>5</departament>
+        <salariu>6000.0</salariu>
+    </angajat>
+</angajati>
