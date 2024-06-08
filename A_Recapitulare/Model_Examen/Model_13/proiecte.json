@@ -1,0 +1,42 @@
+[
+  {
+    "codProiect": 1,
+    "manager": "Ion Popescu",
+    "localitate": "Bucuresti",
+    "strada": "Bd. Unirii",
+    "obiectiv": "Construire cladire birouri",
+    "valoare": 2500000.0
+  },
+  {
+    "codProiect": 2,
+    "manager": "Ana Ionescu",
+    "localitate": "Cluj-Napoca",
+    "strada": "Str. Memorandumului",
+    "obiectiv": "Renovare biblioteca",
+    "valoare": 1500000.0
+  },
+  {
+    "codProiect": 3,
+    "manager": "Ion Popescu",
+    "localitate": "Timisoara",
+    "strada": "Str. Alba Iulia",
+    "obiectiv": "Extindere parc industrial",
+    "valoare": 3000000.0
+  },
+  {
+    "codProiect": 4,
+    "manager": "Maria Vasilescu",
+    "localitate": "Brasov",
+    "strada": "Str. Republicii",
+    "obiectiv": "Modernizare spital",
+    "valoare": 2000000.0
+  },
+  {
+    "codProiect": 5,
+    "manager": "Ana Ionescu",
+    "localitate": "Constanta",
+    "strada": "Bd. Tomis",
+    "obiectiv": "Reabilitare infrastructura",
+    "valoare": 1000000.0
+  }
+]

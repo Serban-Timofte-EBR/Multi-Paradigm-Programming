@@ -1,0 +1,15 @@
+1
+Cod: 1	 Obiectiv: Construire cladire birouri	 Cheltuiala: Fier beton		 Valoarea:10400.0
+Cod: 1	 Obiectiv: Construire cladire birouri	 Cheltuiala: Manopera fier beton		 Valoarea:9000.0
+2
+Cod: 2	 Obiectiv: Renovare biblioteca	 Cheltuiala: Caramida		 Valoarea:13000.0
+Cod: 2	 Obiectiv: Renovare biblioteca	 Cheltuiala: Ciment		 Valoarea:5000.0
+3
+Cod: 3	 Obiectiv: Extindere parc industrial	 Cheltuiala: Vopsea		 Valoarea:5000.0
+Cod: 3	 Obiectiv: Extindere parc industrial	 Cheltuiala: Scule		 Valoarea:3000.0
+4
+Cod: 4	 Obiectiv: Modernizare spital	 Cheltuiala: Beton		 Valoarea:37500.0
+Cod: 4	 Obiectiv: Modernizare spital	 Cheltuiala: Manopera beton		 Valoarea:4800.0
+5
+Cod: 5	 Obiectiv: Reabilitare infrastructura	 Cheltuiala: Sapa		 Valoarea:10000.0
+Cod: 5	 Obiectiv: Reabilitare infrastructura	 Cheltuiala: Manopera sapa		 Valoarea:3000.0
