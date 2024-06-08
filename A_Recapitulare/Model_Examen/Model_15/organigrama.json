@@ -1,0 +1,65 @@
+[
+    {
+        "DenumireCompanie": "Tech Solutions",
+        "Angajati": [
+            {
+                "Salariul": 4500.5,
+                "Nume": "Ion Popescu"
+            },
+            {
+                "Salariul": 4800,
+                "Nume": "Adrian Georgescu"
+            },
+            {
+                "Salariul": 5200,
+                "Nume": "Florin Dumitru"
+            }
+        ]
+    },
+    {
+        "DenumireCompanie": "Web Innovators",
+        "Angajati": [
+            {
+                "Salariul": 5200.75,
+                "Nume": "Maria Ionescu"
+            },
+            {
+                "Salariul": 4900.75,
+                "Nume": "George Matei"
+            }
+        ]
+    },
+    {
+        "DenumireCompanie": "NextGen Technologies",
+        "Angajati": [
+            {
+                "Salariul": 5300,
+                "Nume": "Elena Vasile"
+            },
+            {
+                "Salariul": 5100,
+                "Nume": "Ioana Radulescu"
+            }
+        ]
+    },
+    {
+        "DenumireCompanie": "Digital Future",
+        "Angajati": [{
+            "Salariul": 4600.25,
+            "Nume": "Dan Vasilescu"
+        }]
+    },
+    {
+        "DenumireCompanie": "Innovative Labs",
+        "Angajati": [
+            {
+                "Salariul": 6000.75,
+                "Nume": "Andreea Marin"
+            },
+            {
+                "Salariul": 5800.5,
+                "Nume": "Cristina Popa"
+            }
+        ]
+    }
+]

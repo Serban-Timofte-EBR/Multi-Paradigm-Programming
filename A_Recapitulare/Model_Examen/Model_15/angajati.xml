@@ -1,0 +1,62 @@
+<angajati>
+    <angajat>
+        <codAngajat>1</codAngajat>
+        <codCompanie>1</codCompanie>
+        <nume>Ion Popescu</nume>
+        <salariu>4500.5</salariu>
+    </angajat>
+    <angajat>
+        <codAngajat>2</codAngajat>
+        <codCompanie>2</codCompanie>
+        <nume>Maria Ionescu</nume>
+        <salariu>5200.75</salariu>
+    </angajat>
+    <angajat>
+        <codAngajat>3</codAngajat>
+        <codCompanie>1</codCompanie>
+        <nume>Adrian Georgescu</nume>
+        <salariu>4800.0</salariu>
+    </angajat>
+    <angajat>
+        <codAngajat>4</codAngajat>
+        <codCompanie>3</codCompanie>
+        <nume>Elena Vasile</nume>
+        <salariu>5300.0</salariu>
+    </angajat>
+    <angajat>
+        <codAngajat>5</codAngajat>
+        <codCompanie>4</codCompanie>
+        <nume>Dan Vasilescu</nume>
+        <salariu>4600.25</salariu>
+    </angajat>
+    <angajat>
+        <codAngajat>6</codAngajat>
+        <codCompanie>5</codCompanie>
+        <nume>Andreea Marin</nume>
+        <salariu>6000.75</salariu>
+    </angajat>
+    <angajat>
+        <codAngajat>7</codAngajat>
+        <codCompanie>5</codCompanie>
+        <nume>Cristina Popa</nume>
+        <salariu>5800.5</salariu>
+    </angajat>
+    <angajat>
+        <codAngajat>8</codAngajat>
+        <codCompanie>2</codCompanie>
+        <nume>George Matei</nume>
+        <salariu>4900.75</salariu>
+    </angajat>
+    <angajat>
+        <codAngajat>9</codAngajat>
+        <codCompanie>3</codCompanie>
+        <nume>Ioana Radulescu</nume>
+        <salariu>5100.0</salariu>
+    </angajat>
+    <angajat>
+        <codAngajat>10</codAngajat>
+        <codCompanie>1</codCompanie>
+        <nume>Florin Dumitru</nume>
+        <salariu>5200.0</salariu>
+    </angajat>
+</angajati>

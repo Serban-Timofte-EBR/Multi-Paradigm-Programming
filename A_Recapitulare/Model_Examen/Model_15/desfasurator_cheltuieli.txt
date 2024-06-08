@@ -1,0 +1,20 @@
+1 - Tech Solutions
+	1 - 4500.5
+	3 - 4800.0
+	10 - 5200.0
+
+2 - Web Innovators
+	2 - 5200.75
+	8 - 4900.75
+
+3 - NextGen Technologies
+	4 - 5300.0
+	9 - 5100.0
+
+4 - Digital Future
+	5 - 4600.25
+
+5 - Innovative Labs
+	6 - 6000.75
+	7 - 5800.5
+

@@ -1,0 +1,32 @@
+[
+  {
+    "codCompanie": 1,
+    "denumire": "Tech Solutions",
+    "localitate": "București",
+    "cifraAfaceri": 1200000.5
+  },
+  {
+    "codCompanie": 2,
+    "denumire": "Web Innovators",
+    "localitate": "Cluj-Napoca",
+    "cifraAfaceri": 850000.75
+  },
+  {
+    "codCompanie": 3,
+    "denumire": "NextGen Technologies",
+    "localitate": "București",
+    "cifraAfaceri": 950000.0
+  },
+  {
+    "codCompanie": 4,
+    "denumire": "Digital Future",
+    "localitate": "Iași",
+    "cifraAfaceri": 670000.25
+  },
+  {
+    "codCompanie": 5,
+    "denumire": "Innovative Labs",
+    "localitate": "Timișoara",
+    "cifraAfaceri": 1340000.5
+  }
+]
