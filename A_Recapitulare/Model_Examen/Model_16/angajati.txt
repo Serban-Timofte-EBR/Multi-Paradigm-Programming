@@ -1,0 +1,10 @@
+1,1,Ion Vasilescu,4500.5
+2,1,Elena Popa,5200.75
+3,2,Marian Stan,4800.0
+4,3,Ioana Gheorghe,5300.0
+5,2,Cosmin Grigore,4600.25
+6,3,Daniela Neagu,6000.75
+7,4,Cristian Petre,5800.5
+8,5,Mirela Tudor,4900.75
+9,6,George Marinescu,5100.0
+10,7,Florin Dima,5200.0

@@ -1,0 +1,51 @@
+[
+    {
+        "NumarAngajati": 2,
+        "BugetDisponibil": 1990298.75,
+        "CodDepartament": 1,
+        "DenumireDepartament": "IT",
+        "BugetSalarii": 9701.25
+    },
+    {
+        "NumarAngajati": 2,
+        "BugetDisponibil": 990599.75,
+        "CodDepartament": 2,
+        "DenumireDepartament": "HR",
+        "BugetSalarii": 9400.25
+    },
+    {
+        "NumarAngajati": 2,
+        "BugetDisponibil": 1488699.25,
+        "CodDepartament": 3,
+        "DenumireDepartament": "Marketing",
+        "BugetSalarii": 11300.75
+    },
+    {
+        "NumarAngajati": 1,
+        "BugetDisponibil": 1194199.5,
+        "CodDepartament": 4,
+        "DenumireDepartament": "Finante",
+        "BugetSalarii": 5800.5
+    },
+    {
+        "NumarAngajati": 1,
+        "BugetDisponibil": 1795099.25,
+        "CodDepartament": 5,
+        "DenumireDepartament": "Vanzari",
+        "BugetSalarii": 4900.75
+    },
+    {
+        "NumarAngajati": 1,
+        "BugetDisponibil": 2194900,
+        "CodDepartament": 6,
+        "DenumireDepartament": "Productie",
+        "BugetSalarii": 5100
+    },
+    {
+        "NumarAngajati": 1,
+        "BugetDisponibil": 1094800,
+        "CodDepartament": 7,
+        "DenumireDepartament": "Logistica",
+        "BugetSalarii": 5200
+    }
+]
