@@ -1,0 +1,12 @@
+[
+  {"cod_proiect": 1, "nume_proiect": "Dezvoltare ERP", "manager": "Ion Popescu", "buget": 1500000.0},
+  {"cod_proiect": 2, "nume_proiect": "Aplicatie Mobile", "manager": "Maria Ionescu", "buget": 850000.0},
+  {"cod_proiect": 3, "nume_proiect": "Website E-commerce", "manager": "Alexandru Georgescu", "buget": 600000.0},
+  {"cod_proiect": 4, "nume_proiect": "Platforma de E-learning", "manager": "Andreea Dumitrescu", "buget": 1200000.0},
+  {"cod_proiect": 5, "nume_proiect": "Sistem de management al documentelor", "manager": "Ana Maria Tudor", "buget": 750000.0},
+  {"cod_proiect": 6, "nume_proiect": "Automatizare proces productie", "manager": "Elena Popa", "buget": 1350000.0},
+  {"cod_proiect": 7, "nume_proiect": "Sistem de raportare financiară", "manager": "Dan Radu", "buget": 950000.0},
+  {"cod_proiect": 8, "nume_proiect": "Integrare CRM", "manager": "Ana Maria Tudor", "buget": 1050000.0},
+  {"cod_proiect": 9, "nume_proiect": "Modernizare infrastructură IT", "manager": "George Mihai", "buget": 1150000.0},
+  {"cod_proiect": 10, "nume_proiect": "Dezvoltare platformă IoT", "manager": "Alexandru Georgescu", "buget": 1400000.0}
+]
