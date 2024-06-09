@@ -1,0 +1,16 @@
+Laptop
+Data: 2023-02-17, Cantitate: 2
+
+Telefon
+Data: 2023-01-14, Cantitate: 3
+Data: 2023-01-15, Cantitate: 3
+Data: 2023-01-14, Cantitate: 3
+
+Televizor
+Data: 2023-01-12, Cantitate: 1
+Data: 2023-01-14, Cantitate: 3
+
+Frigider
+Data: 2023-01-10, Cantitate: 2
+
+

@@ -1,0 +1,46 @@
+[
+  {
+    "Vanzari": [{
+      "Data": "2023-02-17",
+      "Cantitate": 2
+    }],
+    "Produs": "Laptop"
+  },
+  {
+    "Vanzari": [
+      {
+        "Data": "2023-01-14",
+        "Cantitate": 3
+      },
+      {
+        "Data": "2023-01-15",
+        "Cantitate": 3
+      },
+      {
+        "Data": "2023-01-14",
+        "Cantitate": 3
+      }
+    ],
+    "Produs": "Telefon"
+  },
+  {
+    "Vanzari": [
+      {
+        "Data": "2023-01-12",
+        "Cantitate": 1
+      },
+      {
+        "Data": "2023-01-14",
+        "Cantitate": 3
+      }
+    ],
+    "Produs": "Televizor"
+  },
+  {
+    "Vanzari": [{
+      "Data": "2023-01-10",
+      "Cantitate": 2
+    }],
+    "Produs": "Frigider"
+  }
+]

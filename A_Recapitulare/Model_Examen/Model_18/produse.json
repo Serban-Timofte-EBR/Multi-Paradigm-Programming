@@ -1,0 +1,7 @@
+[
+  {"id": 1, "denumire": "Laptop", "categorie": "Electronice", "pret": 3500.50},
+  {"id": 2, "denumire": "Telefon", "categorie": "Electronice", "pret": 1500.75},
+  {"id": 3, "denumire": "Televizor", "categorie": "Electronice", "pret": 2500.00},
+  {"id": 4, "denumire": "Frigider", "categorie": "Electrocasnice", "pret": 2000.00},
+  {"id": 5, "denumire": "Masina de spalat", "categorie": "Electrocasnice", "pret": 1800.25}
+]
