@@ -1,0 +1,32 @@
+[
+    {
+        "NumarPacientiInternati": 2,
+        "CodSectie": 1,
+        "DenumireSectie": "ORL"
+    },
+    {
+        "NumarPacientiInternati": 2,
+        "CodSectie": 6,
+        "DenumireSectie": "Terapie intensiva"
+    },
+    {
+        "NumarPacientiInternati": 1,
+        "CodSectie": 2,
+        "DenumireSectie": "Cardiologie"
+    },
+    {
+        "NumarPacientiInternati": 1,
+        "CodSectie": 4,
+        "DenumireSectie": "Ginecologie"
+    },
+    {
+        "NumarPacientiInternati": 1,
+        "CodSectie": 5,
+        "DenumireSectie": "Boli infectioase"
+    },
+    {
+        "NumarPacientiInternati": 0,
+        "CodSectie": 3,
+        "DenumireSectie": "Pneumologie"
+    }
+]

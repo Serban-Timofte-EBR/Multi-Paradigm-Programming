@@ -1,0 +1,6 @@
+1, ORL, 2
+6, Terapie intensiva, 2
+2, Cardiologie, 1
+4, Ginecologie, 1
+5, Boli infectioase, 1
+3, Pneumologie, 0
