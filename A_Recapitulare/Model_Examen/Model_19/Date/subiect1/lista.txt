@@ -1,0 +1,5 @@
+Denumire Produs, Numar tranzactii
+Stafide 200g,4
+Seminte de pin300g,3
+Crema de branza 300g,2
+Ceai verde Lipton,1
