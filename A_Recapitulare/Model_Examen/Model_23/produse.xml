@@ -1,0 +1,27 @@
+<produse>
+    <produs>
+        <cod>1</cod>
+        <denumire>Produs A</denumire>
+        <pret>10.5</pret>
+    </produs>
+    <produs>
+        <cod>2</cod>
+        <denumire>Produs B</denumire>
+        <pret>20.0</pret>
+    </produs>
+    <produs>
+        <cod>3</cod>
+        <denumire>Produs C</denumire>
+        <pret>30.75</pret>
+    </produs>
+    <produs>
+        <cod>4</cod>
+        <denumire>Produs D</denumire>
+        <pret>15.25</pret>
+    </produs>
+    <produs>
+        <cod>5</cod>
+        <denumire>Produs E</denumire>
+        <pret>25.0</pret>
+    </produs>
+</produse>

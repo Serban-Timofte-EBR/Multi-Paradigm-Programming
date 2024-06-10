@@ -1,0 +1,5 @@
+Produs A - 2
+Produs B - 2
+Produs C - 2
+Produs D - 1
+Produs E - 2
